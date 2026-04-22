@@ -20,12 +20,11 @@ function getInitialTheme(): Theme {
 }
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setTheme] = useState<Theme>("dark")
+  const [theme, setTheme] = useState<Theme>(() => getInitialTheme())
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    setTheme(getInitialTheme())
-    setMounted(true)
+    queueMicrotask(() => setMounted(true))
   }, [])
 
   const toggleTheme = useCallback(() => {

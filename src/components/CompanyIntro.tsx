@@ -1,4 +1,3 @@
-import { cn } from "@/lib/utils";
 
 const stats = [
   { number: "200+", label: "服务国家及地区" },
@@ -22,7 +21,7 @@ export default function CompanyIntro() {
         {/* Description */}
         <div className="max-w-4xl mx-auto text-center mb-16">
           <p className="text-base dark:text-white text-black/70 leading-relaxed text-left">
-            自2022年初成立以来，我们以"与所有人共创智能"为使命，致力于推动人工智能科技前沿发展，实现通用人工智能（AGI）。ofubest
+            自2022年初成立以来，我们以&quot;与所有人共创智能&quot;为使命，致力于推动人工智能科技前沿发展，实现通用人工智能（AGI）。ofubest
             自主研发了一系列多模态通用大模型，具备强大的代码和 Agent
             能力，以及超长上下文处理能力，能够理解、生成并整合包括文本、音频、图像、视频和音乐在内的多种模态。
           </p>
