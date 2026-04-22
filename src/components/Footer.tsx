@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { cn } from "@/lib/utils"
+import { Logo } from "./Logo"
 
 const researchLinks = [
   { label: "ofubest M2.7", href: "/news/minimax-m27-zh" },
@@ -105,41 +105,7 @@ export function Footer() {
           <div className="w-full lg:w-[200px]">
             {/* Logo */}
             <div className="mb-6">
-              <svg
-                width="140"
-                height="28"
-                viewBox="0 0 140 28"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M0 14C0 6.268 6.268 0 14 0s14 6.268 14 14-6.268 14-14 14S0 21.732 0 14z"
-                  fill="url(#paint0_linear)"
-                />
-                <text
-                  x="32"
-                  y="20"
-                  fill="white"
-                  fontFamily="Arial, sans-serif"
-                  fontSize="18"
-                  fontWeight="bold"
-                >
-                  ofubest
-                </text>
-                <defs>
-                  <linearGradient
-                    id="paint0_linear"
-                    x1="0"
-                    y1="14"
-                    x2="28"
-                    y2="14"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stopColor="#8B5CF6" />
-                    <stop offset="1" stopColor="#6366F1" />
-                  </linearGradient>
-                </defs>
-              </svg>
+              <Logo />
             </div>
 
             {/* Email */}
