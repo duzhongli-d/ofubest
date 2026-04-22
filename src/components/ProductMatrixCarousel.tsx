@@ -137,7 +137,7 @@ export function ProductMatrixCarousel() {
   }
 
   return (
-    <section className="py-20 bg-black">
+    <section className="py-20 dark:bg-black bg-white">
       <div className="max-w-[1440px] mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-12">
