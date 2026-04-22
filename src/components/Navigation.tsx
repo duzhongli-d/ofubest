@@ -2,7 +2,9 @@
 
 import { useState, useRef, useEffect } from "react"
 import Link from "next/link"
+import { Sun, Moon } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { useTheme } from "@/contexts/ThemeContext"
 
 interface NavItem {
   label: string
@@ -401,6 +403,8 @@ function NavItemWithDropdown({
 }
 
 export function Navigation() {
+  const { theme, toggleTheme } = useTheme()
+
   return (
     <nav
       className={cn(
@@ -619,6 +623,21 @@ export function Navigation() {
 
         {/* Right Side */}
         <div className="flex items-center gap-4">
+          <button
+            onClick={toggleTheme}
+            className={cn(
+              "text-sm text-white/70 hover:text-white transition-colors duration-200",
+              "p-1"
+            )}
+            aria-label="Toggle theme"
+          >
+            {theme === "dark" ? (
+              <Sun className="w-4 h-4" />
+            ) : (
+              <Moon className="w-4 h-4" />
+            )}
+          </button>
+
           <Link
             href="https://www.minimax.io/"
             target="_blank"
