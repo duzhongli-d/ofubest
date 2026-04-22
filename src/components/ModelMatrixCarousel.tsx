@@ -68,10 +68,12 @@ function ModelCardComponent({
     <Link
       href={card.link}
       className={cn(
-        "flex-shrink-0 w-[280px]",
-        "dark:bg-[#141414] bg-gray-200 rounded-2xl overflow-hidden",
-        "cursor-pointer transition-all duration-300",
-        "hover:translate-y-[-4px] hover:shadow-lg hover:shadow-black/40",
+        "flex-shrink-0 w-[280px] rounded-2xl overflow-hidden",
+        "dark:bg-[#141414] bg-gray-200",
+        "border dark:border-white/[0.08] border-black/[0.08]",
+        "shadow-[0_4px_24px_rgba(0,0,0,0.4)]",
+        "cursor-pointer transition-all duration-200",
+        "hover:shadow-[0_8px_32px_rgba(0,0,0,0.5)] hover:-translate-y-0.5",
         "block"
       )}
     >

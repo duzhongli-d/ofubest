@@ -409,16 +409,23 @@ export function Navigation() {
     <nav
       className={cn(
         "fixed top-0 left-0 right-0 z-50",
-        "dark:bg-[#0a0a0a]/80 bg-white/80 backdrop-blur-md",
-        "dark:border-white/10 border-black/10",
-        "px-6"
+        "h-16",
+        "bg-transparent"
       )}
     >
+      {/* Gradient accent line */}
+      <div
+        className="absolute top-0 left-0 right-0 h-px"
+        style={{
+          background: "linear-gradient(90deg, #9333EA 0%, #3B82F6 50%, #06B6D4 100%)",
+          opacity: 0.8,
+        }}
+      />
       <div
         className={cn(
           "max-w-[1440px] mx-auto",
           "flex items-center justify-between",
-          "h-16"
+          "h-16 px-6"
         )}
       >
         {/* Logo */}
