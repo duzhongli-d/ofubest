@@ -5,6 +5,7 @@ import Link from "next/link"
 import { Sun, Moon } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { useTheme } from "@/contexts/ThemeContext"
+import { Logo } from "./Logo"
 
 interface NavItem {
   label: string
@@ -430,52 +431,7 @@ export function Navigation() {
       >
         {/* Logo */}
         <Link href="/" className="flex items-center">
-          <svg
-            width="140"
-            height="28"
-            viewBox="0 0 140 28"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M0 14C0 6.268 6.268 0 14 0s14 6.268 14 14-6.268 14-14 14S0 21.732 0 14z"
-              fill="url(#paint0_linear)"
-            />
-            <text
-              x="32"
-              y="20"
-              fill={theme === "dark" ? "white" : "url(#ofubest-text-gradient)"}
-              fontFamily="Arial, sans-serif"
-              fontSize="18"
-              fontWeight="bold"
-            >
-              ofubest
-            </text>
-            <defs>
-              <linearGradient
-                id="paint0_linear"
-                x1="0"
-                y1="14"
-                x2="28"
-                y2="14"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#8B5CF6" />
-                <stop offset="1" stopColor="#6366F1" />
-              </linearGradient>
-              <linearGradient
-                id="ofubest-text-gradient"
-                x1="32"
-                y1="14"
-                x2="140"
-                y2="14"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#F97316" />
-                <stop offset="1" stopColor="#EA580C" />
-              </linearGradient>
-            </defs>
-          </svg>
+          <Logo />
         </Link>
 
         {/* Nav Items */}
