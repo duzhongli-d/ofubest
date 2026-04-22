@@ -47,7 +47,11 @@ function ProductCardComponent({ card }: { card: ProductCard }) {
       href={card.link}
       className={cn(
         "flex-shrink-0 w-[280px] rounded-2xl overflow-hidden cursor-pointer block",
-        "dark:bg-[#141414] bg-gray-200"
+        "dark:bg-[#141414] bg-gray-200",
+        "border dark:border-white/[0.08] border-black/[0.08]",
+        "shadow-[0_4px_24px_rgba(0,0,0,0.4)]",
+        "transition-all duration-200",
+        "hover:shadow-[0_8px_32px_rgba(0,0,0,0.5)] hover:-translate-y-0.5"
       )}
     >
       {/* Card Image */}
