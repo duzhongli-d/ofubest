@@ -1,10 +1,10 @@
 import { cn } from "@/lib/utils";
 
 const stats = [
-  { number: "0+", label: "服务国家及地区" },
-  { number: "0亿+", label: "全球个人用户" },
+  { number: "200+", label: "服务国家及地区" },
+  { number: "2亿+", label: "全球个人用户" },
   { number: "214,000+", label: "企业客户及开发者" },
-  { number: "0+", label: "企业服务覆盖国家" },
+  { number: "100+", label: "企业服务覆盖国家" },
 ];
 
 export default function CompanyIntro() {

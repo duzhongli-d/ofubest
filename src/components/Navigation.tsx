@@ -175,6 +175,13 @@ const loginItems: NavItemChild[] = [
   },
 ]
 
+const newsItems: NavItemChild[] = [
+  {
+    label: "最新资讯",
+    href: "/news",
+  },
+]
+
 const navItems: NavItem[] = [
   {
     label: "模型",
@@ -190,7 +197,7 @@ const navItems: NavItem[] = [
   },
   {
     label: "新闻动态",
-    href: "#",
+    children: newsItems,
   },
   {
     label: "关于我们",
@@ -561,6 +568,34 @@ export function Navigation() {
                   >
                     <div className="flex flex-col gap-3">
                       {aboutItems.map((child, childIndex) => (
+                        <Link
+                          key={childIndex}
+                          href={child.href}
+                          className={cn(
+                            "text-sm text-white/70 hover:text-white transition-colors duration-200",
+                            "block py-1"
+                          )}
+                        >
+                          {child.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </NavItemWithDropdown>
+              )
+            }
+
+            if (item.label === "新闻动态") {
+              return (
+                <NavItemWithDropdown key={index} label={item.label}>
+                  <div
+                    className={cn(
+                      "bg-[#141414] border border-white/10 rounded-xl shadow-xl p-4",
+                      "min-w-[200px]"
+                    )}
+                  >
+                    <div className="flex flex-col gap-3">
+                      {newsItems.map((child, childIndex) => (
                         <Link
                           key={childIndex}
                           href={child.href}

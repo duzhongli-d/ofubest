@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils"
 const slides = [
   {
     id: "music-2-6",
+    titleIcon: "/images/hero-title-icon.png",
     heading: "MiniMax Music 2.6",
     subtitle: "Cover 翻唱、器乐提升、Agent 集成，让每个人都能成为音乐创作者",
     buttons: [
@@ -17,18 +18,19 @@ const slides = [
       { text: "了解更多", href: "/news/music-26" },
     ],
     genreCards: [
-      { image: "/images/music-cover.png", label: "Cover" },
-      { image: "/images/music-pop.png", label: "Pop" },
-      { image: "/images/music-hyperpop.png", label: "Hyperpop" },
-      { image: "/images/music-electronic.png", label: "Electronic" },
-      { image: "/images/music-trap.png", label: "Trap" },
-      { image: "/images/music-edm.png", label: "EDM" },
-      { image: "/images/music-electronic.png", label: "Electronic" },
-      { image: "/images/music-pop.png", label: "Pop" },
+      { image: "/images/music-cover.png", label: "Cover", tags: ["New", "翻唱"] },
+      { image: "/images/music-pop.png", label: "Pop", tags: ["Pop", "Melody"] },
+      { image: "/images/music-hyperpop.png", label: "Hyperpop", tags: ["New", "Dance", "Club"] },
+      { image: "/images/music-electronic.png", label: "Electronic", tags: ["New", "Drive", "Sports"] },
+      { image: "/images/music-trap.png", label: "Trap", tags: ["New", "Video Scoring"] },
+      { image: "/images/music-edm.png", label: "EDM", tags: ["New", "Epic", "Game"] },
+      { image: "/images/music-electronic.png", label: "Electronic", tags: ["New", "Drive", "Sports"] },
+      { image: "/images/music-pop.png", label: "Pop", tags: ["Pop", "Melody"] },
     ],
   },
   {
     id: "m2-7",
+    titleIcon: "/images/m27-title-icon.png",
     heading: "MiniMax M2.7",
     subtitle: "开启模型的自我进化，相比 M2.5 在实战能力上有显著的提升",
     buttons: [
@@ -52,20 +54,22 @@ const slides = [
   },
   {
     id: "token-plan",
+    titleIcon: "/images/token-plan-icon.png",
     heading: "Token Plan",
-    subtitle: "高效、易用、可靠 - 开启智能化新时代",
+    subtitle: "专为开发者定制的超高性价比 token 套餐",
     buttons: [
       { text: "即刻接入API", href: "https://platform.minimaxi.com" },
       { text: "订阅", href: "/token-plan" },
     ],
     benefitCards: [
-      { title: "最强模型", desc: "接入 MiniMax 全系列模型" },
-      { title: "包月畅用", desc: "灵活订阅，无限使用" },
-      { title: "开箱即用", desc: "快速集成，落地生产" },
+      { title: "最强模型", desc: "生产级交付" },
+      { title: "包月畅用", desc: "不焦虑，越多越划算" },
+      { title: "开箱即用", desc: "一键接入主流开发工具" },
     ],
   },
   {
     id: "hailuo-2-3",
+    titleIcon: "/images/hailuo23-title-icon.png",
     heading: "MiniMax Hailuo 2.3",
     subtitle: "动静皆非凡：极致动态，入微传情",
     links: [
@@ -77,6 +81,7 @@ const slides = [
   },
   {
     id: "speech-2-8",
+    titleIcon: "/images/speech28-title-icon.png",
     heading: "MiniMax Speech 2.8",
     subtitle: "赋予 AI 语音'人的温度'",
     links: [
@@ -85,15 +90,16 @@ const slides = [
       { text: "API 文档", href: "/docs/api-reference/speech" },
     ],
     voiceSamples: [
-      { image: "/images/voice-sample-1.png", label: "睡前低语" },
-      { image: "/images/voice-sample-2.png", label: "恐怖故事" },
-      { image: "/images/voice-sample-3.png", label: "哥布林的交易" },
+      { image: "/images/voice-sample-1.png", label: "睡前低语", tags: ["日语", "ASMR"] },
+      { image: "/images/voice-sample-2.png", label: "恐怖故事", tags: ["英语", "恐怖"] },
+      { image: "/images/voice-sample-3.png", label: "哥布林的交易", tags: ["英语", "角色"] },
     ],
   },
   {
     id: "agent",
+    titleIcon: "/images/agent-title-icon.png",
     heading: "MiniMax Agent",
-    subtitle: "智能助手新时代 - 让 AI 成为你的得力助手",
+    subtitle: "智能助手，为您的工作和生活提供全方位支持。",
     links: [
       { text: "即刻体验", href: "/agent" },
       { text: "了解更多", href: "/news/agent" },
@@ -102,8 +108,9 @@ const slides = [
   },
   {
     id: "m2-her",
+    titleIcon: "/images/m2her-title-icon.png",
     heading: "MiniMax M2-her",
-    subtitle: "多角色沉浸扮演 - 用 AI 活出另一种人生",
+    subtitle: "多角色沉浸扮演，驾驭长轮次复杂场景",
     links: [
       { text: "即刻体验", href: "/m2-her" },
       { text: "了解更多", href: "/news/m2-her" },
@@ -215,7 +222,23 @@ function SlideContent({ slide, isActive }: { slide: (typeof slides)[0]; isActive
     return (
       <div className="grid grid-cols-2 gap-12 px-20 py-16 h-full items-center">
         <div className="flex flex-col gap-6">
-          <h2 className="text-5xl font-bold text-white">{slide.heading}</h2>
+          <div className="flex items-center gap-3">
+            <span className="text-3xl font-bold text-white">MiniMax</span>
+            {slide.titleIcon && (
+              <div className="relative w-[44px] h-[44px]">
+                {!imageErrors[`titleIcon-${slide.id}`] ? (
+                  <Image
+                    src={slide.titleIcon}
+                    alt=""
+                    fill
+                    className="object-contain"
+                    onError={() => handleImageError(`titleIcon-${slide.id}`)}
+                  />
+                ) : null}
+              </div>
+            )}
+            <span className="text-3xl font-bold text-white">{slide.heading.replace("MiniMax ", "")}</span>
+          </div>
           <p className="text-lg text-white/70 max-w-md">{slide.subtitle}</p>
           <div className="flex gap-4 mt-4">
             {slide.buttons?.map((btn, i) => (
@@ -248,6 +271,13 @@ function SlideContent({ slide, isActive }: { slide: (typeof slides)[0]; isActive
               )}
               <div className="absolute bottom-0 left-0 right-0 p-2 bg-gradient-to-t from-black/80 to-transparent">
                 <span className="text-xs text-white/90 font-medium">{card.label}</span>
+                {card.tags && (
+                  <div className="flex flex-wrap gap-1 mt-1">
+                    {card.tags.map((tag, tagIdx) => (
+                      <span key={tagIdx} className="text-[10px] text-white/60">{tag}</span>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           ))}
@@ -261,7 +291,23 @@ function SlideContent({ slide, isActive }: { slide: (typeof slides)[0]; isActive
     return (
       <div className="grid grid-cols-2 gap-12 px-20 py-16 h-full items-center">
         <div className="flex flex-col gap-6">
-          <h2 className="text-5xl font-bold text-white">{slide.heading}</h2>
+          <div className="flex items-center gap-3">
+            <span className="text-3xl font-bold text-white">MiniMax</span>
+            {slide.titleIcon && (
+              <div className="relative w-[44px] h-[44px]">
+                {!imageErrors[`titleIcon-${slide.id}`] ? (
+                  <Image
+                    src={slide.titleIcon}
+                    alt=""
+                    fill
+                    className="object-contain"
+                    onError={() => handleImageError(`titleIcon-${slide.id}`)}
+                  />
+                ) : null}
+              </div>
+            )}
+            <span className="text-3xl font-bold text-white">{slide.heading.replace("MiniMax ", "")}</span>
+          </div>
           <p className="text-lg text-white/70 max-w-md">{slide.subtitle}</p>
           <div className="flex gap-4 mt-4 flex-wrap">
             {slide.buttons?.map((btn, i) => (
@@ -334,7 +380,23 @@ function SlideContent({ slide, isActive }: { slide: (typeof slides)[0]; isActive
     return (
       <div className="grid grid-cols-2 gap-12 px-20 py-16 h-full items-center">
         <div className="flex flex-col gap-6">
-          <h2 className="text-5xl font-bold text-white">{slide.heading}</h2>
+          <div className="flex items-center gap-3">
+            <span className="text-3xl font-bold text-white">Token</span>
+            {slide.titleIcon && (
+              <div className="relative w-[44px] h-[44px]">
+                {!imageErrors[`titleIcon-${slide.id}`] ? (
+                  <Image
+                    src={slide.titleIcon}
+                    alt=""
+                    fill
+                    className="object-contain"
+                    onError={() => handleImageError(`titleIcon-${slide.id}`)}
+                  />
+                ) : null}
+              </div>
+            )}
+            <span className="text-3xl font-bold text-white">Plan</span>
+          </div>
           <p className="text-lg text-white/70 max-w-md">{slide.subtitle}</p>
           <div className="flex gap-4 mt-4">
             {slide.buttons?.map((btn, i) => (
@@ -368,7 +430,23 @@ function SlideContent({ slide, isActive }: { slide: (typeof slides)[0]; isActive
     return (
       <div className="grid grid-cols-2 gap-12 px-20 py-16 h-full items-center">
         <div className="flex flex-col gap-6">
-          <h2 className="text-5xl font-bold text-white">{slide.heading}</h2>
+          <div className="flex items-center gap-3">
+            <span className="text-3xl font-bold text-white">MiniMax</span>
+            {slide.titleIcon && (
+              <div className="relative w-[44px] h-[44px]">
+                {!imageErrors[`titleIcon-${slide.id}`] ? (
+                  <Image
+                    src={slide.titleIcon}
+                    alt=""
+                    fill
+                    className="object-contain"
+                    onError={() => handleImageError(`titleIcon-${slide.id}`)}
+                  />
+                ) : null}
+              </div>
+            )}
+            <span className="text-3xl font-bold text-white">{slide.heading.replace("MiniMax ", "")}</span>
+          </div>
           <p className="text-lg text-white/70 max-w-md">{slide.subtitle}</p>
           <div className="flex gap-4 mt-4 flex-wrap">
             {slide.links?.map((link, i) => (
@@ -407,7 +485,23 @@ function SlideContent({ slide, isActive }: { slide: (typeof slides)[0]; isActive
     return (
       <div className="grid grid-cols-2 gap-12 px-20 py-16 h-full items-center">
         <div className="flex flex-col gap-6">
-          <h2 className="text-5xl font-bold text-white">{slide.heading}</h2>
+          <div className="flex items-center gap-3">
+            <span className="text-3xl font-bold text-white">MiniMax</span>
+            {slide.titleIcon && (
+              <div className="relative w-[44px] h-[44px]">
+                {!imageErrors[`titleIcon-${slide.id}`] ? (
+                  <Image
+                    src={slide.titleIcon}
+                    alt=""
+                    fill
+                    className="object-contain"
+                    onError={() => handleImageError(`titleIcon-${slide.id}`)}
+                  />
+                ) : null}
+              </div>
+            )}
+            <span className="text-3xl font-bold text-white">{slide.heading.replace("MiniMax ", "")}</span>
+          </div>
           <p className="text-lg text-white/70 max-w-md">{slide.subtitle}</p>
           <div className="flex gap-4 mt-4 flex-wrap">
             {slide.links?.map((link, i) => (
@@ -441,6 +535,13 @@ function SlideContent({ slide, isActive }: { slide: (typeof slides)[0]; isActive
               )}
               <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/80 to-transparent">
                 <span className="text-sm text-white/90 font-medium">{sample.label}</span>
+                {sample.tags && (
+                  <div className="flex gap-1 mt-1">
+                    {sample.tags.map((tag, tagIdx) => (
+                      <span key={tagIdx} className="text-[10px] text-white/60">{tag}{tagIdx < (sample.tags?.length ?? 0) - 1 ? " · " : ""}</span>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           ))}
@@ -454,7 +555,23 @@ function SlideContent({ slide, isActive }: { slide: (typeof slides)[0]; isActive
     return (
       <div className="flex flex-col justify-center px-20 py-16 h-full gap-8">
         <div className="flex flex-col gap-4">
-          <h2 className="text-5xl font-bold text-white">{slide.heading}</h2>
+          <div className="flex items-center gap-3">
+            <span className="text-3xl font-bold text-white">MiniMax</span>
+            {slide.titleIcon && (
+              <div className="relative w-[44px] h-[44px]">
+                {!imageErrors[`titleIcon-${slide.id}`] ? (
+                  <Image
+                    src={slide.titleIcon}
+                    alt=""
+                    fill
+                    className="object-contain"
+                    onError={() => handleImageError(`titleIcon-${slide.id}`)}
+                  />
+                ) : null}
+              </div>
+            )}
+            <span className="text-3xl font-bold text-white">{slide.heading.replace("MiniMax ", "")}</span>
+          </div>
           <p className="text-lg text-white/70 max-w-lg">{slide.subtitle}</p>
           <div className="flex gap-4 mt-2 flex-wrap">
             {slide.links?.map((link, i) => (
@@ -493,7 +610,23 @@ function SlideContent({ slide, isActive }: { slide: (typeof slides)[0]; isActive
     return (
       <div className="grid grid-cols-2 gap-12 px-20 py-16 h-full items-center">
         <div className="flex flex-col gap-6">
-          <h2 className="text-5xl font-bold text-white">{slide.heading}</h2>
+          <div className="flex items-center gap-3">
+            <span className="text-3xl font-bold text-white">MiniMax</span>
+            {slide.titleIcon && (
+              <div className="relative w-[44px] h-[44px]">
+                {!imageErrors[`titleIcon-${slide.id}`] ? (
+                  <Image
+                    src={slide.titleIcon}
+                    alt=""
+                    fill
+                    className="object-contain"
+                    onError={() => handleImageError(`titleIcon-${slide.id}`)}
+                  />
+                ) : null}
+              </div>
+            )}
+            <span className="text-3xl font-bold text-white">{slide.heading.replace("MiniMax ", "")}</span>
+          </div>
           <p className="text-lg text-white/70 max-w-md">{slide.subtitle}</p>
           <div className="flex gap-4 mt-4 flex-wrap">
             {slide.links?.map((link, i) => (
