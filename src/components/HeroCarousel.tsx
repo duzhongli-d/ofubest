@@ -154,25 +154,25 @@ export function HeroCarousel() {
 
   return (
     <section
-      className="relative w-full overflow-hidden bg-gradient-to-b from-[#0a0a0a] to-[#050505]"
+      className="relative w-full overflow-hidden dark:bg-gradient-to-b dark:from-[#0a0a0a] dark:to-[#050505] bg-gradient-to-b from-gray-100 to-white"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="max-w-[1440px] mx-auto relative">
+      <div className="max-w-[1440px] mx-auto relative overflow-hidden">
         {/* Navigation Buttons */}
         <button
           onClick={prev}
-          className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all duration-200 flex items-center justify-center"
+          className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full dark:bg-white/10 bg-black/10 backdrop-blur-md dark:border-white/20 border-black/20 dark:hover:bg-white/20 hover:bg-black/20 transition-all duration-200 flex items-center justify-center"
           aria-label="Previous slide"
         >
-          <ChevronLeft className="w-5 h-5 text-white" />
+          <ChevronLeft className="w-5 h-5 dark:dark:text-white text-black text-black" />
         </button>
         <button
           onClick={next}
-          className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all duration-200 flex items-center justify-center"
+          className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full dark:bg-white/10 bg-black/10 backdrop-blur-md dark:border-white/20 border-black/20 dark:hover:bg-white/20 hover:bg-black/20 transition-all duration-200 flex items-center justify-center"
           aria-label="Next slide"
         >
-          <ChevronRight className="w-5 h-5 text-white" />
+          <ChevronRight className="w-5 h-5 dark:dark:text-white text-black text-black" />
         </button>
 
         {/* Carousel Track */}
@@ -199,7 +199,7 @@ export function HeroCarousel() {
               onClick={() => goTo(i)}
               className={cn(
                 "w-2 h-2 rounded-full transition-all duration-300",
-                i === current ? "bg-white w-6" : "bg-white/30 hover:bg-white/50"
+                i === current ? "dark:bg-white bg-black w-6" : "dark:bg-white/30 bg-black/30 hover:dark:bg-white/50 hover:bg-black/50"
               )}
               aria-label={`Go to slide ${i + 1}`}
             />
@@ -223,7 +223,7 @@ function SlideContent({ slide, isActive }: { slide: (typeof slides)[0]; isActive
       <div className="grid grid-cols-2 gap-12 px-20 py-16 h-full items-center">
         <div className="flex flex-col gap-6">
           <div className="flex items-center gap-3">
-            <span className="text-3xl font-bold text-white">MiniMax</span>
+            <span className="text-3xl font-bold dark:text-white text-black">MiniMax</span>
             {slide.titleIcon && (
               <div className="relative w-[44px] h-[44px]">
                 {!imageErrors[`titleIcon-${slide.id}`] ? (
@@ -237,15 +237,15 @@ function SlideContent({ slide, isActive }: { slide: (typeof slides)[0]; isActive
                 ) : null}
               </div>
             )}
-            <span className="text-3xl font-bold text-white">{slide.heading.replace("MiniMax ", "")}</span>
+            <span className="text-3xl font-bold dark:text-white text-black">{slide.heading.replace("MiniMax ", "")}</span>
           </div>
-          <p className="text-lg text-white/70 max-w-md">{slide.subtitle}</p>
+          <p className="text-lg dark:text-white/70 text-black/70 max-w-md">{slide.subtitle}</p>
           <div className="flex gap-4 mt-4">
             {slide.buttons?.map((btn, i) => (
               <a
                 key={i}
                 href={btn.href}
-                className="inline-flex items-center justify-center rounded-full px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/10 text-white font-medium transition-all duration-200"
+                className="inline-flex items-center justify-center rounded-full px-6 py-3 dark:bg-white/10 dark:hover:bg-white/20 dark:border-white/10 bg-black/10 hover:bg-black/20 border border-black/10 dark:text-white text-black font-medium transition-all duration-200"
               >
                 {btn.text}
               </a>
@@ -267,14 +267,14 @@ function SlideContent({ slide, isActive }: { slide: (typeof slides)[0]; isActive
                   onError={() => handleImageError(`genre-${i}`)}
                 />
               ) : (
-                <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a]" />
+                <div className="absolute inset-0 bg-gradient-to-br dark:from-[#1a1a1a] dark:to-[#0a0a0a] from-gray-200 to-gray-100" />
               )}
-              <div className="absolute bottom-0 left-0 right-0 p-2 bg-gradient-to-t from-black/80 to-transparent">
-                <span className="text-xs text-white/90 font-medium">{card.label}</span>
+              <div className="absolute bottom-0 left-0 right-0 p-2 bg-gradient-to-t dark:from-black/80 dark:to-transparent from-white/80 to-transparent">
+                <span className="text-xs dark:text-white/90 text-black/90 font-medium">{card.label}</span>
                 {card.tags && (
                   <div className="flex flex-wrap gap-1 mt-1">
                     {card.tags.map((tag, tagIdx) => (
-                      <span key={tagIdx} className="text-[10px] text-white/60">{tag}</span>
+                      <span key={tagIdx} className="text-[10px] dark:text-white/60 text-black/60">{tag}</span>
                     ))}
                   </div>
                 )}
@@ -292,7 +292,7 @@ function SlideContent({ slide, isActive }: { slide: (typeof slides)[0]; isActive
       <div className="grid grid-cols-2 gap-12 px-20 py-16 h-full items-center">
         <div className="flex flex-col gap-6">
           <div className="flex items-center gap-3">
-            <span className="text-3xl font-bold text-white">MiniMax</span>
+            <span className="text-3xl font-bold dark:text-white text-black">MiniMax</span>
             {slide.titleIcon && (
               <div className="relative w-[44px] h-[44px]">
                 {!imageErrors[`titleIcon-${slide.id}`] ? (
@@ -306,15 +306,15 @@ function SlideContent({ slide, isActive }: { slide: (typeof slides)[0]; isActive
                 ) : null}
               </div>
             )}
-            <span className="text-3xl font-bold text-white">{slide.heading.replace("MiniMax ", "")}</span>
+            <span className="text-3xl font-bold dark:text-white text-black">{slide.heading.replace("MiniMax ", "")}</span>
           </div>
-          <p className="text-lg text-white/70 max-w-md">{slide.subtitle}</p>
+          <p className="text-lg dark:text-white/70 text-black/70 max-w-md">{slide.subtitle}</p>
           <div className="flex gap-4 mt-4 flex-wrap">
             {slide.buttons?.map((btn, i) => (
               <a
                 key={i}
                 href={btn.href}
-                className="inline-flex items-center justify-center rounded-full px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/10 text-white font-medium transition-all duration-200"
+                className="inline-flex items-center justify-center rounded-full px-6 py-3 dark:bg-white/10 dark:hover:bg-white/20 dark:border-white/10 bg-black/10 hover:bg-black/20 border border-black/10 dark:text-white text-black font-medium transition-all duration-200"
               >
                 {btn.text}
               </a>
@@ -325,12 +325,12 @@ function SlideContent({ slide, isActive }: { slide: (typeof slides)[0]; isActive
           {slide.featureCards?.map((card, i) => (
             <div
               key={i}
-              className="group p-5 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:translate-x-2"
+              className="group p-5 rounded-xl dark:bg-white/5 dark:border-white/10 dark:hover:bg-white/10 bg-black/5 border border-black/10 hover:bg-black/10 transition-all duration-300 hover:translate-x-2"
               style={{ perspective: "1000px" }}
             >
               <div className="transition-transform duration-300 group-hover:rotate-y-3">
-                <h3 className="text-white font-semibold text-lg">{card.title}</h3>
-                <p className="text-white/60 text-sm mt-1">{card.desc}</p>
+                <h3 className="dark:text-white text-black font-semibold text-lg">{card.title}</h3>
+                <p className="dark:text-white/60 text-black/60 text-sm mt-1">{card.desc}</p>
               </div>
             </div>
           ))}
@@ -344,12 +344,12 @@ function SlideContent({ slide, isActive }: { slide: (typeof slides)[0]; isActive
     return (
       <div className="flex flex-col justify-center px-20 py-16 h-full gap-8">
         <div className="flex flex-col gap-4">
-          <h2 className="text-5xl font-bold text-white">{slide.heading}</h2>
-          <p className="text-lg text-white/70">{slide.subtitle}</p>
+          <h2 className="text-5xl font-bold dark:text-white text-black">{slide.heading}</h2>
+          <p className="text-lg dark:text-white/70 text-black/70">{slide.subtitle}</p>
           {slide.linkText && (
             <a
               href={slide.linkHref}
-              className="inline-flex items-center text-white/70 hover:text-white transition-colors mt-2"
+              className="inline-flex items-center dark:text-white/70 text-black/70 hover:dark:text-white/70 hover:text-black transition-colors mt-2"
             >
               {slide.linkText}
               <ChevronRight className="w-4 h-4 ml-1" />
@@ -366,8 +366,8 @@ function SlideContent({ slide, isActive }: { slide: (typeof slides)[0]; isActive
               onError={() => handleImageError("banner")}
             />
           ) : (
-            <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a1a] to-[#0a0a0a] flex items-center justify-center">
-              <span className="text-white/40 text-sm">Banner Image</span>
+            <div className="absolute inset-0 bg-gradient-to-r dark:from-[#1a1a1a] dark:to-[#0a0a0a] from-gray-200 to-gray-100 flex items-center justify-center">
+              <span className="dark:text-white/40 text-black/40 text-sm">Banner Image</span>
             </div>
           )}
         </div>
@@ -381,7 +381,7 @@ function SlideContent({ slide, isActive }: { slide: (typeof slides)[0]; isActive
       <div className="grid grid-cols-2 gap-12 px-20 py-16 h-full items-center">
         <div className="flex flex-col gap-6">
           <div className="flex items-center gap-3">
-            <span className="text-3xl font-bold text-white">Token</span>
+            <span className="text-3xl font-bold dark:text-white text-black">Token</span>
             {slide.titleIcon && (
               <div className="relative w-[44px] h-[44px]">
                 {!imageErrors[`titleIcon-${slide.id}`] ? (
@@ -395,15 +395,15 @@ function SlideContent({ slide, isActive }: { slide: (typeof slides)[0]; isActive
                 ) : null}
               </div>
             )}
-            <span className="text-3xl font-bold text-white">Plan</span>
+            <span className="text-3xl font-bold dark:text-white text-black">Plan</span>
           </div>
-          <p className="text-lg text-white/70 max-w-md">{slide.subtitle}</p>
+          <p className="text-lg dark:text-white/70 text-black/70 max-w-md">{slide.subtitle}</p>
           <div className="flex gap-4 mt-4">
             {slide.buttons?.map((btn, i) => (
               <a
                 key={i}
                 href={btn.href}
-                className="inline-flex items-center justify-center rounded-full px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/10 text-white font-medium transition-all duration-200"
+                className="inline-flex items-center justify-center rounded-full px-6 py-3 dark:bg-white/10 dark:hover:bg-white/20 dark:border-white/10 bg-black/10 hover:bg-black/20 border border-black/10 dark:text-white text-black font-medium transition-all duration-200"
               >
                 {btn.text}
               </a>
@@ -414,10 +414,10 @@ function SlideContent({ slide, isActive }: { slide: (typeof slides)[0]; isActive
           {slide.benefitCards?.map((card, i) => (
             <div
               key={i}
-              className="p-5 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300"
+              className="p-5 rounded-xl dark:bg-white/5 dark:border-white/10 dark:hover:bg-white/10 bg-black/5 border border-black/10 hover:bg-black/10 transition-all duration-300"
             >
-              <h3 className="text-white font-semibold text-sm">{card.title}</h3>
-              <p className="text-white/60 text-xs mt-2">{card.desc}</p>
+              <h3 className="dark:text-white text-black font-semibold text-sm">{card.title}</h3>
+              <p className="dark:text-white/60 text-black/60 text-xs mt-2">{card.desc}</p>
             </div>
           ))}
         </div>
@@ -431,7 +431,7 @@ function SlideContent({ slide, isActive }: { slide: (typeof slides)[0]; isActive
       <div className="grid grid-cols-2 gap-12 px-20 py-16 h-full items-center">
         <div className="flex flex-col gap-6">
           <div className="flex items-center gap-3">
-            <span className="text-3xl font-bold text-white">MiniMax</span>
+            <span className="text-3xl font-bold dark:text-white text-black">MiniMax</span>
             {slide.titleIcon && (
               <div className="relative w-[44px] h-[44px]">
                 {!imageErrors[`titleIcon-${slide.id}`] ? (
@@ -445,18 +445,18 @@ function SlideContent({ slide, isActive }: { slide: (typeof slides)[0]; isActive
                 ) : null}
               </div>
             )}
-            <span className="text-3xl font-bold text-white">{slide.heading.replace("MiniMax ", "")}</span>
+            <span className="text-3xl font-bold dark:text-white text-black">{slide.heading.replace("MiniMax ", "")}</span>
           </div>
-          <p className="text-lg text-white/70 max-w-md">{slide.subtitle}</p>
+          <p className="text-lg dark:text-white/70 text-black/70 max-w-md">{slide.subtitle}</p>
           <div className="flex gap-4 mt-4 flex-wrap">
             {slide.links?.map((link, i) => (
               <a
                 key={i}
                 href={link.href}
-                className="inline-flex items-center text-white/70 hover:text-white transition-colors"
+                className="inline-flex items-center dark:text-white/70 text-black/70 hover:dark:text-white/70 hover:text-black transition-colors"
               >
                 {link.text}
-                {i < (slide.links?.length ?? 0) - 1 && <span className="mx-3 text-white/30">|</span>}
+                {i < (slide.links?.length ?? 0) - 1 && <span className="mx-3 dark:text-white/30 text-black/30">|</span>}
               </a>
             ))}
           </div>
@@ -471,8 +471,8 @@ function SlideContent({ slide, isActive }: { slide: (typeof slides)[0]; isActive
               onError={() => handleImageError("banner")}
             />
           ) : (
-            <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] flex items-center justify-center">
-              <span className="text-white/40 text-sm">Hailuo Banner</span>
+            <div className="absolute inset-0 bg-gradient-to-br dark:from-[#1a1a1a] dark:to-[#0a0a0a] from-gray-200 to-gray-100 flex items-center justify-center">
+              <span className="dark:text-white/40 text-black/40 text-sm">Hailuo Banner</span>
             </div>
           )}
         </div>
@@ -486,7 +486,7 @@ function SlideContent({ slide, isActive }: { slide: (typeof slides)[0]; isActive
       <div className="grid grid-cols-2 gap-12 px-20 py-16 h-full items-center">
         <div className="flex flex-col gap-6">
           <div className="flex items-center gap-3">
-            <span className="text-3xl font-bold text-white">MiniMax</span>
+            <span className="text-3xl font-bold dark:text-white text-black">MiniMax</span>
             {slide.titleIcon && (
               <div className="relative w-[44px] h-[44px]">
                 {!imageErrors[`titleIcon-${slide.id}`] ? (
@@ -500,18 +500,18 @@ function SlideContent({ slide, isActive }: { slide: (typeof slides)[0]; isActive
                 ) : null}
               </div>
             )}
-            <span className="text-3xl font-bold text-white">{slide.heading.replace("MiniMax ", "")}</span>
+            <span className="text-3xl font-bold dark:text-white text-black">{slide.heading.replace("MiniMax ", "")}</span>
           </div>
-          <p className="text-lg text-white/70 max-w-md">{slide.subtitle}</p>
+          <p className="text-lg dark:text-white/70 text-black/70 max-w-md">{slide.subtitle}</p>
           <div className="flex gap-4 mt-4 flex-wrap">
             {slide.links?.map((link, i) => (
               <a
                 key={i}
                 href={link.href}
-                className="inline-flex items-center text-white/70 hover:text-white transition-colors"
+                className="inline-flex items-center dark:text-white/70 text-black/70 hover:dark:text-white/70 hover:text-black transition-colors"
               >
                 {link.text}
-                {i < (slide.links?.length ?? 0) - 1 && <span className="mx-3 text-white/30">|</span>}
+                {i < (slide.links?.length ?? 0) - 1 && <span className="mx-3 dark:text-white/30 text-black/30">|</span>}
               </a>
             ))}
           </div>
@@ -531,14 +531,14 @@ function SlideContent({ slide, isActive }: { slide: (typeof slides)[0]; isActive
                   onError={() => handleImageError(`voice-${i}`)}
                 />
               ) : (
-                <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a]" />
+                <div className="absolute inset-0 bg-gradient-to-br dark:from-[#1a1a1a] dark:to-[#0a0a0a] from-gray-200 to-gray-100" />
               )}
-              <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/80 to-transparent">
-                <span className="text-sm text-white/90 font-medium">{sample.label}</span>
+              <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t dark:from-black/80 dark:to-transparent from-white/80 to-transparent">
+                <span className="text-sm dark:text-white/90 text-black/90 font-medium">{sample.label}</span>
                 {sample.tags && (
                   <div className="flex gap-1 mt-1">
                     {sample.tags.map((tag, tagIdx) => (
-                      <span key={tagIdx} className="text-[10px] text-white/60">{tag}{tagIdx < (sample.tags?.length ?? 0) - 1 ? " · " : ""}</span>
+                      <span key={tagIdx} className="text-[10px] dark:text-white/60 text-black/60">{tag}{tagIdx < (sample.tags?.length ?? 0) - 1 ? " · " : ""}</span>
                     ))}
                   </div>
                 )}
@@ -556,7 +556,7 @@ function SlideContent({ slide, isActive }: { slide: (typeof slides)[0]; isActive
       <div className="flex flex-col justify-center px-20 py-16 h-full gap-8">
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-3">
-            <span className="text-3xl font-bold text-white">MiniMax</span>
+            <span className="text-3xl font-bold dark:text-white text-black">MiniMax</span>
             {slide.titleIcon && (
               <div className="relative w-[44px] h-[44px]">
                 {!imageErrors[`titleIcon-${slide.id}`] ? (
@@ -570,18 +570,18 @@ function SlideContent({ slide, isActive }: { slide: (typeof slides)[0]; isActive
                 ) : null}
               </div>
             )}
-            <span className="text-3xl font-bold text-white">{slide.heading.replace("MiniMax ", "")}</span>
+            <span className="text-3xl font-bold dark:text-white text-black">{slide.heading.replace("MiniMax ", "")}</span>
           </div>
-          <p className="text-lg text-white/70 max-w-lg">{slide.subtitle}</p>
+          <p className="text-lg dark:text-white/70 text-black/70 max-w-lg">{slide.subtitle}</p>
           <div className="flex gap-4 mt-2 flex-wrap">
             {slide.links?.map((link, i) => (
               <a
                 key={i}
                 href={link.href}
-                className="inline-flex items-center text-white/70 hover:text-white transition-colors"
+                className="inline-flex items-center dark:text-white/70 text-black/70 hover:dark:text-white/70 hover:text-black transition-colors"
               >
                 {link.text}
-                {i < (slide.links?.length ?? 0) - 1 && <span className="mx-3 text-white/30">|</span>}
+                {i < (slide.links?.length ?? 0) - 1 && <span className="mx-3 dark:text-white/30 text-black/30">|</span>}
               </a>
             ))}
           </div>
@@ -596,8 +596,8 @@ function SlideContent({ slide, isActive }: { slide: (typeof slides)[0]; isActive
               onError={() => handleImageError("banner")}
             />
           ) : (
-            <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a1a] to-[#0a0a0a] flex items-center justify-center">
-              <span className="text-white/40 text-sm">Agent Banner</span>
+            <div className="absolute inset-0 bg-gradient-to-r dark:from-[#1a1a1a] dark:to-[#0a0a0a] from-gray-200 to-gray-100 flex items-center justify-center">
+              <span className="dark:text-white/40 text-black/40 text-sm">Agent Banner</span>
             </div>
           )}
         </div>
@@ -611,7 +611,7 @@ function SlideContent({ slide, isActive }: { slide: (typeof slides)[0]; isActive
       <div className="grid grid-cols-2 gap-12 px-20 py-16 h-full items-center">
         <div className="flex flex-col gap-6">
           <div className="flex items-center gap-3">
-            <span className="text-3xl font-bold text-white">MiniMax</span>
+            <span className="text-3xl font-bold dark:text-white text-black">MiniMax</span>
             {slide.titleIcon && (
               <div className="relative w-[44px] h-[44px]">
                 {!imageErrors[`titleIcon-${slide.id}`] ? (
@@ -625,18 +625,18 @@ function SlideContent({ slide, isActive }: { slide: (typeof slides)[0]; isActive
                 ) : null}
               </div>
             )}
-            <span className="text-3xl font-bold text-white">{slide.heading.replace("MiniMax ", "")}</span>
+            <span className="text-3xl font-bold dark:text-white text-black">{slide.heading.replace("MiniMax ", "")}</span>
           </div>
-          <p className="text-lg text-white/70 max-w-md">{slide.subtitle}</p>
+          <p className="text-lg dark:text-white/70 text-black/70 max-w-md">{slide.subtitle}</p>
           <div className="flex gap-4 mt-4 flex-wrap">
             {slide.links?.map((link, i) => (
               <a
                 key={i}
                 href={link.href}
-                className="inline-flex items-center text-white/70 hover:text-white transition-colors"
+                className="inline-flex items-center dark:text-white/70 text-black/70 hover:dark:text-white/70 hover:text-black transition-colors"
               >
                 {link.text}
-                {i < (slide.links?.length ?? 0) - 1 && <span className="mx-3 text-white/30">|</span>}
+                {i < (slide.links?.length ?? 0) - 1 && <span className="mx-3 dark:text-white/30 text-black/30">|</span>}
               </a>
             ))}
           </div>
@@ -651,8 +651,8 @@ function SlideContent({ slide, isActive }: { slide: (typeof slides)[0]; isActive
               onError={() => handleImageError("banner")}
             />
           ) : (
-            <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] flex items-center justify-center">
-              <span className="text-white/40 text-sm">M2-her Banner</span>
+            <div className="absolute inset-0 bg-gradient-to-br dark:from-[#1a1a1a] dark:to-[#0a0a0a] from-gray-200 to-gray-100 flex items-center justify-center">
+              <span className="dark:text-white/40 text-black/40 text-sm">M2-her Banner</span>
             </div>
           )}
         </div>
