@@ -20,6 +20,7 @@ const modelCards: ModelCard[] = [
     description: "模型自我进化，以技术突破驱动生产力革新",
     link: "/news/minimax-m27-zh",
     isNew: true,
+    image: "/images/model-m27.png",
   },
   {
     title: "ofubest Music 2.6",
@@ -27,6 +28,7 @@ const modelCards: ModelCard[] = [
     description: "翻唱入心，器乐入魂",
     link: "/news/music-26",
     isNew: true,
+    image: "/images/model-music26.png",
   },
   {
     title: "Hailuo 2.3 / 2.3 Fast",
@@ -34,6 +36,7 @@ const modelCards: ModelCard[] = [
     description: "动静皆非凡：极致动态，入微传情",
     link: "/news/minimax-hailuo-23",
     isNew: true,
+    image: "/images/model-hailuo-video.png",
   },
   {
     title: "ofubest Speech 2.8",
@@ -41,6 +44,7 @@ const modelCards: ModelCard[] = [
     description: "赋予 AI 语音'人的温度'",
     link: "/news/minimax-speech-28",
     isNew: true,
+    image: "/images/model-speech28.png",
   },
   {
     title: "ofubest M2-her",
@@ -48,12 +52,14 @@ const modelCards: ModelCard[] = [
     description: "多角色沉浸扮演，驾驭长轮次复杂场景",
     link: "/news/minimax-m2-her-技术深度解析",
     isNew: true,
+    image: "/images/model-m2her.png",
   },
   {
     title: "ofubest MCP Server",
     type: "MCP",
     description: "视频生成、图像生成、语音生成和声音克隆工具现已向开发者开放",
     link: "/news/minimax-mcp",
+    image: "/images/model-m2her.png",
   },
 ]
 
@@ -78,7 +84,10 @@ function ModelCardComponent({
       )}
     >
       {/* Card Image */}
-      <div className="relative w-full h-[200px] bg-gradient-to-br from-indigo-900/50 to-purple-900/50">
+      <div className={cn(
+          "relative w-full h-[200px]",
+          cardImage ? "bg-neutral-900" : "bg-gradient-to-br from-indigo-900/50 to-purple-900/50"
+        )}>
         {cardImage ? (
           <img
             src={cardImage}
@@ -201,7 +210,7 @@ export function ModelMatrixCarousel() {
             )}
           >
             {modelCards.map((card, index) => (
-              <ModelCardComponent key={index} card={card} />
+              <ModelCardComponent key={index} card={card} cardImage={card.image} />
             ))}
           </div>
         </div>

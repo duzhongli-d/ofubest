@@ -17,27 +17,32 @@ const productCards: ProductCard[] = [
     title: "ofubest Agent",
     description: "简单指令，创意无限",
     link: "https://agent.ofubest.com",
+    image: "/images/product-agent.png",
   },
   {
     title: "海螺视频",
     description: "每个想法都是一部大片",
     link: "https://hailuoai.com/video",
+    image: "/images/model-hailuo-video.png",
   },
   {
     title: "ofubest Audio",
     description: "超拟人AI声音创意",
     link: "https://hailuoai.com/audio",
+    image: "/images/product-audio.png",
   },
   {
     title: "海螺视频Agent",
     description: "Vibe Videoing 零门槛，成片直出",
     link: "/news/video-agent",
     isNew: true,
+    image: "/images/product-video-agent.png",
   },
   {
     title: "星野",
     description: "骤入佳境，流连星野",
     link: "https://www.xingyeai.com",
+    image: "/images/product-xingye.png",
   },
 ]
 
@@ -46,8 +51,7 @@ function ProductCardComponent({ card }: { card: ProductCard }) {
     <Link
       href={card.link}
       className={cn(
-        "flex-shrink-0 w-[280px] rounded-2xl overflow-hidden cursor-pointer block",
-        "dark:bg-[#141414] bg-gray-200",
+        "relative flex-shrink-0 w-[280px] h-[380px] rounded-2xl overflow-hidden cursor-pointer block",
         "border dark:border-white/[0.08] border-black/[0.08]",
         "shadow-[0_4px_24px_rgba(0,0,0,0.4)]",
         "transition-all duration-200",
@@ -55,32 +59,27 @@ function ProductCardComponent({ card }: { card: ProductCard }) {
       )}
     >
       {/* Card Image */}
-      <div className="relative w-full h-[200px] overflow-hidden">
-        <div className="w-full h-full bg-gradient-to-br from-indigo-900/50 to-purple-900/50" />
+      <div className="absolute inset-0 overflow-hidden">
         {card.image && (
           <img
             src={card.image}
             alt={card.title}
-            className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+            className="w-full h-full object-cover"
           />
         )}
 
         {/* NEW Badge */}
         {card.isNew && (
-          <div className="absolute top-3 left-3 bg-primary/90 dark:text-black text-white text-xs px-2 py-1 rounded-full font-medium">
+          <div className="absolute top-3 right-3 bg-primary/90 dark:text-black text-white text-xs px-2 py-1 rounded-full font-medium z-10">
             NEW
           </div>
         )}
 
-        {/* Title Overlay */}
-        <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
-          <h3 className="text-lg font-semibold dark:text-white text-black">{card.title}</h3>
+        {/* Card Content */}
+        <div className="absolute bottom-0 left-0 right-0 p-5">
+          <h3 className="text-base font-semibold text-white mb-1">{card.title}</h3>
+          <p className="text-sm text-white/70 leading-relaxed">{card.description}</p>
         </div>
-      </div>
-
-      {/* Card Description */}
-      <div className="p-4">
-        <p className="text-sm dark:text-white/70 text-black/70">{card.description}</p>
       </div>
     </Link>
   )
