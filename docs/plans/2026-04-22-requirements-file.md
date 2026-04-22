@@ -2,7 +2,7 @@
 
 > **For Claude:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task.
 
-**Goal:** Create a `REQUIREMENTS.md` specification document capturing all environment setup, dependencies, and configuration requirements for the ai-website-cloner-template project.
+**Goal:** Create a `REQUIREMENTS.md` specification document capturing all environment setup, dependencies, and configuration requirements for the ofubest-website project.
 
 **Architecture:** A single specification document that documents the environment setup process, all dependency groups (runtime, dev, optional), system requirements, and configuration steps needed to get this project running from scratch.
 
@@ -71,8 +71,8 @@ Run: Create `REQUIREMENTS.md` with the following structure:
 
 ### Step 1: Clone the Repository
 ```bash
-git clone https://github.com/JCodesMore/ai-website-cloner-template.git
-cd ai-website-cloner-template
+git clone https://github.com/JCodesMore/ofubest-website.git
+cd ofubest-website
 ```
 
 ### Step 2: Install Dependencies
@@ -118,7 +118,7 @@ The application will be available at `http://localhost:3000`
 ## Project Structure
 
 ```
-ai-website-cloner-template/
+ofubest-website/
 ├── src/
 │   ├── app/              # Next.js App Router pages
 │   ├── components/        # React components

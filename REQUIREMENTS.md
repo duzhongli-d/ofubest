@@ -49,8 +49,8 @@
 
 ### Step 1: Clone the Repository
 ```bash
-git clone https://github.com/JCodesMore/ai-website-cloner-template.git
-cd ai-website-cloner-template
+git clone https://github.com/JCodesMore/ofubest-website.git
+cd ofubest-website
 ```
 
 ### Step 2: Install Dependencies
@@ -96,7 +96,7 @@ The application will be available at `http://localhost:3000`
 ## Project Structure
 
 ```
-ai-website-cloner-template/
+ofubest-website/
 ├── src/
 │   ├── app/              # Next.js App Router pages
 │   ├── components/        # React components

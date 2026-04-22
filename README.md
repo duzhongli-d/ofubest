@@ -1,6 +1,6 @@
 # AI Website Cloner Template
 
-<a href="https://github.com/JCodesMore/ai-website-cloner-template/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT License" /></a> <a href="https://github.com/JCodesMore/ai-website-cloner-template/stargazers"><img src="https://img.shields.io/github/stars/JCodesMore/ai-website-cloner-template?style=flat" alt="Stars" /></a> <a href="https://discord.gg/hrTSX5yTpB"><img src="https://img.shields.io/discord/1400896964597383279?label=discord" alt="Discord" /></a>
+<a href="https://github.com/JCodesMore/ofubest-website/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT License" /></a> <a href="https://github.com/JCodesMore/ofubest-website/stargazers"><img src="https://img.shields.io/github/stars/JCodesMore/ofubest-website?style=flat" alt="Stars" /></a> <a href="https://discord.gg/hrTSX5yTpB"><img src="https://img.shields.io/discord/1400896964597383279?label=discord" alt="Discord" /></a>
 
 A reusable template for reverse-engineering any website into a clean, modern Next.js codebase using AI coding agents. 
 
@@ -18,7 +18,7 @@ Point it at a URL, run `/clone-website`, and your AI agent will inspect the site
 
 1. **Clone this repository**
    ```bash
-   git clone https://github.com/JCodesMore/ai-website-cloner-template.git my-clone
+   git clone https://github.com/JCodesMore/ofubest-website.git my-clone
    cd my-clone
    ```
 2. **Install dependencies**
@@ -148,7 +148,7 @@ Each script regenerates the platform-specific copies automatically. Agents that 
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=JCodesMore/ai-website-cloner-template&type=Date)](https://star-history.com/#JCodesMore/ai-website-cloner-template&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=JCodesMore/ofubest-website&type=Date)](https://star-history.com/#JCodesMore/ofubest-website&Date)
 
 ## License
 
