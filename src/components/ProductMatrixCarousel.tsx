@@ -14,9 +14,9 @@ interface ProductCard {
 
 const productCards: ProductCard[] = [
   {
-    title: "MiniMax Agent",
+    title: "ofubest Agent",
     description: "简单指令，创意无限",
-    link: "https://agent.minimaxi.com",
+    link: "https://agent.ofubest.com",
   },
   {
     title: "海螺视频",
@@ -24,7 +24,7 @@ const productCards: ProductCard[] = [
     link: "https://hailuoai.com/video",
   },
   {
-    title: "MiniMax Audio",
+    title: "ofubest Audio",
     description: "超拟人AI声音创意",
     link: "https://hailuoai.com/audio",
   },
@@ -145,7 +145,7 @@ export function ProductMatrixCarousel() {
             AI 产品矩阵
           </h2>
           <p className="text-base dark:text-white text-black/60 max-w-[600px] mx-auto">
-            从智能对话到视频创作，从声音合成到虚拟角色，MiniMax 为你打造全方位 AI 体验
+            从智能对话到视频创作，从声音合成到虚拟角色，ofubest 为你打造全方位 AI 体验
           </p>
         </div>
 

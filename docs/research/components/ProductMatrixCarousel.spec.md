@@ -17,9 +17,9 @@ section (py-20 bg-black)
 │       ├── button (prev - disabled at start)
 │       ├── button (next)
 │       └── div (cards track)
-│           ├── Card: MiniMax Agent
+│           ├── Card: ofubest Agent
 │           ├── Card: 海螺视频
-│           ├── Card: MiniMax Audio
+│           ├── Card: ofubest Audio
 │           ├── Card: 海螺视频Agent (NEW)
 │           └── Card: 星野
 ```
@@ -78,7 +78,7 @@ section (py-20 bg-black)
 
 ## Cards Data
 
-1. **MiniMax Agent**
+1. **ofubest Agent**
    - Description: "简单指令，创意无限"
    - Link: https://agent.minimaxi.com
 
@@ -86,7 +86,7 @@ section (py-20 bg-black)
    - Description: "每个想法都是一部大片"
    - Link: https://hailuoai.com/video
 
-3. **MiniMax Audio**
+3. **ofubest Audio**
    - Description: "超拟人AI声音创意"
    - Link: https://hailuoai.com/audio
 

@@ -165,18 +165,18 @@
   }
 }
 
-/* MiniMax custom tokens */
+/* ofubest custom tokens */
 :root {
-  /* MiniMax color palette */
-  --minimax-primary: oklch(0.205 0 0);
-  --minimax-accent: oklch(0.55 0.18 280);
-  --minimax-accent-hover: oklch(0.5 0.18 280);
-  --minimax-bg-dark: oklch(0.08 0 0);
-  --minimax-bg-darker: oklch(0.05 0 0);
-  --minimax-text-primary: oklch(0.985 0 0);
-  --minimax-text-secondary: oklch(0.7 0 0);
-  --minimax-text-muted: oklch(0.5 0 0);
-  --minimax-border: oklch(1 0 0 / 10%);
-  --minimax-card-bg: oklch(0.12 0 0);
-  --minimax-card-hover: oklch(0.15 0 0);
+  /* ofubest color palette */
+  --ofubest-primary: oklch(0.205 0 0);
+  --ofubest-accent: oklch(0.55 0.18 280);
+  --ofubest-accent-hover: oklch(0.5 0.18 280);
+  --ofubest-bg-dark: oklch(0.08 0 0);
+  --ofubest-bg-darker: oklch(0.05 0 0);
+  --ofubest-text-primary: oklch(0.985 0 0);
+  --ofubest-text-secondary: oklch(0.7 0 0);
+  --ofubest-text-muted: oklch(0.5 0 0);
+  --ofubest-border: oklch(1 0 0 / 10%);
+  --ofubest-card-bg: oklch(0.12 0 0);
+  --ofubest-card-hover: oklch(0.15 0 0);
 }

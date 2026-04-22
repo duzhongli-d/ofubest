@@ -15,14 +15,14 @@ interface ModelCard {
 
 const modelCards: ModelCard[] = [
   {
-    title: "MiniMax M2.7",
+    title: "ofubest M2.7",
     type: "Text Model",
     description: "模型自我进化，以技术突破驱动生产力革新",
     link: "/news/minimax-m27-zh",
     isNew: true,
   },
   {
-    title: "MiniMax Music 2.6",
+    title: "ofubest Music 2.6",
     type: "Music Model",
     description: "翻唱入心，器乐入魂",
     link: "/news/music-26",
@@ -36,21 +36,21 @@ const modelCards: ModelCard[] = [
     isNew: true,
   },
   {
-    title: "MiniMax Speech 2.8",
+    title: "ofubest Speech 2.8",
     type: "Audio Model",
     description: "赋予 AI 语音'人的温度'",
     link: "/news/minimax-speech-28",
     isNew: true,
   },
   {
-    title: "MiniMax M2-her",
+    title: "ofubest M2-her",
     type: "Text Model",
     description: "多角色沉浸扮演，驾驭长轮次复杂场景",
     link: "/news/minimax-m2-her-技术深度解析",
     isNew: true,
   },
   {
-    title: "MiniMax MCP Server",
+    title: "ofubest MCP Server",
     type: "MCP",
     description: "视频生成、图像生成、语音生成和声音克隆工具现已向开发者开放",
     link: "/news/minimax-mcp",

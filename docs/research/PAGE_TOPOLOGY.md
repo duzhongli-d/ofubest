@@ -1,4 +1,4 @@
-# MiniMax Homepage Page Topology
+# ofubest Homepage Page Topology
 
 ## Section Order (top to bottom)
 
@@ -13,38 +13,38 @@
 - **Structure:**
   - Left/right arrow navigation buttons
   - Multiple slides that auto-advance
-  - First slide: "MiniMax Music 2.6" with 8 genre cards (Cover, Pop, Hyperpop, Electronic, Trap, EDM...)
-  - Second slide: "MiniMax M2.7" with 3 feature cards
+  - First slide: "ofubest Music 2.6" with 8 genre cards (Cover, Pop, Hyperpop, Electronic, Trap, EDM...)
+  - Second slide: "ofubest M2.7" with 3 feature cards
   - Third slide: "2025年全年业绩" with banner image
   - Fourth slide: "Token Plan" with 3 benefit cards
-  - Fifth slide: "MiniMax Hailuo 2.3"
-  - Sixth slide: "MiniMax Speech 2.8" with 3 voice sample cards
-  - Seventh slide: "MiniMax Agent" with banner
-  - Eighth slide: "MiniMax M2-her" with banner
+  - Fifth slide: "ofubest Hailuo 2.3"
+  - Sixth slide: "ofubest Speech 2.8" with 3 voice sample cards
+  - Seventh slide: "ofubest Agent" with banner
+  - Eighth slide: "ofubest M2-her" with banner
 - **Interaction:** Time-driven auto-play, button-controlled prev/next
 
 ### 3. Model Matrix Carousel ("全栈模型矩阵")
 - **Position:** Flow content
 - **Structure:** Section with heading + carousel of 6 model cards
-  - MiniMax M2.7 (Text Model)
-  - MiniMax Music 2.6 (Music Model)
+  - ofubest M2.7 (Text Model)
+  - ofubest Music 2.6 (Music Model)
   - Hailuo 2.3 / 2.3 Fast (Video Model)
-  - MiniMax Speech 2.8 (Audio Model)
-  - MiniMax M2-her (Text Model)
-  - MiniMax MCP Server (MCP)
+  - ofubest Speech 2.8 (Audio Model)
+  - ofubest M2-her (Text Model)
+  - ofubest MCP Server (MCP)
 - **Interaction:** Horizontal scroll carousel with prev/next buttons
 
 ### 4. Product Matrix ("AI 产品矩阵")
 - **Position:** Flow content
 - **Structure:** Section with heading + carousel of 5 product cards
-  - MiniMax Agent
+  - ofubest Agent
   - 海螺视频 (Hailuo Video)
-  - MiniMax Audio
+  - ofubest Audio
   - 海螺视频Agent (NEW)
   - 星野 (Xingye)
 - **Interaction:** Horizontal scroll carousel with prev/next buttons
 
-### 5. Company Introduction ("MiniMax")
+### 5. Company Introduction ("ofubest")
 - **Position:** Flow content
 - **Structure:**
   - Heading + subtitle

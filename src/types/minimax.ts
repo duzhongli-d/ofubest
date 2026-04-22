@@ -1,4 +1,4 @@
-// MiniMax homepage content types
+// ofubest homepage content types
 
 export interface NavDropdownItem {
   label: string;

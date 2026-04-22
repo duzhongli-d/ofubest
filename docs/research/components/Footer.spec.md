@@ -142,16 +142,16 @@ footer (bg-[#0a0a0a] text-white)
 ## Link Content
 
 ### 研究 (Research)
-- MiniMax M2.7 → /news/minimax-m27-zh
-- MiniMax M2.5 → /news/minimax-m25
-- MiniMax M2-her → /news/minimax-m2-her-技术深度解析
-- MiniMax M2.1 → /news/minimax-m21
-- MiniMax M2 → /news/minimax-m2
-- MiniMax Speech 2.8 → /news/minimax-speech-28
-- MiniMax Hailuo 2.3 → /news/minimax-hailuo-23
-- MiniMax Music 2.6 → /news/music-26
-- MiniMax Music 2.5+ → /news/music-25-2
-- MiniMax Music 2.0 → /news/minimax-music-20
+- ofubest M2.7 → /news/minimax-m27-zh
+- ofubest M2.5 → /news/minimax-m25
+- ofubest M2-her → /news/minimax-m2-her-技术深度解析
+- ofubest M2.1 → /news/minimax-m21
+- ofubest M2 → /news/minimax-m2
+- ofubest Speech 2.8 → /news/minimax-speech-28
+- ofubest Hailuo 2.3 → /news/minimax-hailuo-23
+- ofubest Music 2.6 → /news/music-26
+- ofubest Music 2.5+ → /news/music-25-2
+- ofubest Music 2.0 → /news/minimax-music-20
 
 ### 产品 (Products)
 - Agent → https://agent.minimaxi.com/
@@ -170,8 +170,8 @@ footer (bg-[#0a0a0a] text-white)
 - 加入我们 → /careers
 
 ### Social Links
-- GitHub → https://github.com/MiniMax-AI
-- HuggingFace → https://huggingface.co/MiniMaxAI
+- GitHub → https://github.com/ofubest-AI
+- HuggingFace → https://huggingface.co/ofubestAI
 - Discord → https://discord.gg/DPC4AHFCBw
 
 ### Legal

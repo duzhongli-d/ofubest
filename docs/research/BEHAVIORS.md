@@ -1,4 +1,4 @@
-# MiniMax Homepage Behaviors
+# ofubest Homepage Behaviors
 
 ## Interaction Model Summary
 

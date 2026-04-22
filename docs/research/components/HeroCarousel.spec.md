@@ -58,7 +58,7 @@ section (relative, overflow-hidden, bg-gradient-to-b from-dark to-darker)
 - alignItems: center
 
 ### Left Content
-- heading: "MiniMax Music 2.6"
+- heading: "ofubest Music 2.6"
 - subtitle paragraph
 - 2 buttons: "即刻接入API", "了解更多"
 
@@ -86,7 +86,7 @@ section (relative, overflow-hidden, bg-gradient-to-b from-dark to-darker)
 - padding: 60px 80px
 
 ### Left Content
-- heading: "MiniMax M2.7"
+- heading: "ofubest M2.7"
 - subtitle paragraph
 - 3 buttons: "即刻接入API", "立即体验Agent", "了解更多"
 
@@ -138,7 +138,7 @@ section (relative, overflow-hidden, bg-gradient-to-b from-dark to-darker)
 - padding: 60px 80px
 
 ### Left Content
-- heading: "MiniMax Hailuo 2.3"
+- heading: "ofubest Hailuo 2.3"
 - subtitle: "动静皆非凡：极致动态，入微传情"
 - 3 links
 
@@ -154,7 +154,7 @@ section (relative, overflow-hidden, bg-gradient-to-b from-dark to-darker)
 - padding: 60px 80px
 
 ### Left Content
-- heading: "MiniMax Speech 2.8"
+- heading: "ofubest Speech 2.8"
 - subtitle: "赋予 AI 语音'人的温度'"
 - 3 links
 
@@ -168,7 +168,7 @@ section (relative, overflow-hidden, bg-gradient-to-b from-dark to-darker)
 - padding: 60px 80px
 
 ### Content
-- heading: "MiniMax Agent"
+- heading: "ofubest Agent"
 - subtitle: "智能助手..."
 - 2 links
 - Banner image
@@ -182,7 +182,7 @@ section (relative, overflow-hidden, bg-gradient-to-b from-dark to-darker)
 - padding: 60px 80px
 
 ### Left Content
-- heading: "MiniMax M2-her"
+- heading: "ofubest M2-her"
 - subtitle: "多角色沉浸扮演..."
 - 2 links
 
@@ -197,13 +197,13 @@ section (relative, overflow-hidden, bg-gradient-to-b from-dark to-darker)
 ## Text Content
 
 ### Slide 1 - Music 2.6
-- Heading: "MiniMax Music 2.6"
+- Heading: "ofubest Music 2.6"
 - Subtitle: "Cover 翻唱、器乐提升、Agent 集成，让每个人都能成为音乐创作者"
 - Button 1: "即刻接入API" → platform.minimaxi.com/docs/api-reference/music-generation
 - Button 2: "了解更多" → /news/music-26
 
 ### Slide 2 - M2.7
-- Heading: "MiniMax M2.7"
+- Heading: "ofubest M2.7"
 - Subtitle: "开启模型的自我进化，相比 M2.5 在实战能力上有显著的提升"
 - Feature 1: "Agent Harness 能力" / "构建自我进化的 Agent harness"
 - Feature 2: "强工程与 Coding 能力" / "一个真正理解生产系统的模型"

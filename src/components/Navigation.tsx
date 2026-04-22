@@ -22,49 +22,49 @@ const modelCategories: NavItemChild[] = [
   {
     label: "文本",
     href: "#",
-    description: "MiniMax 大语言模型",
+    description: "ofubest 大语言模型",
   },
   {
-    label: "MiniMax M2.7",
+    label: "ofubest M2.7",
     href: "#",
   },
   {
-    label: "MiniMax M2.5",
+    label: "ofubest M2.5",
     href: "#",
   },
   {
-    label: "MiniMax M2-Her",
+    label: "ofubest M2-Her",
     href: "#",
   },
   {
-    label: "MiniMax M2.1",
+    label: "ofubest M2.1",
     href: "#",
   },
   {
-    label: "MiniMax M2",
+    label: "ofubest M2",
     href: "#",
   },
   {
     label: "语音",
     href: "#",
-    description: "MiniMax 语音模型",
+    description: "ofubest 语音模型",
   },
   {
-    label: "MiniMax Speech 2.8",
+    label: "ofubest Speech 2.8",
     href: "#",
   },
   {
-    label: "MiniMax Speech 2.6",
+    label: "ofubest Speech 2.6",
     href: "#",
   },
   {
-    label: "MiniMax Speech 2.5",
+    label: "ofubest Speech 2.5",
     href: "#",
   },
   {
     label: "视频",
     href: "#",
-    description: "MiniMax 视频生成模型",
+    description: "ofubest 视频生成模型",
   },
   {
     label: "Hailuo 2.3",
@@ -81,26 +81,26 @@ const modelCategories: NavItemChild[] = [
   {
     label: "音乐",
     href: "#",
-    description: "MiniMax 音乐生成模型",
+    description: "ofubest 音乐生成模型",
   },
   {
-    label: "MiniMax Music 2.6",
+    label: "ofubest Music 2.6",
     href: "#",
   },
   {
-    label: "MiniMax Music 2.5+",
+    label: "ofubest Music 2.5+",
     href: "#",
   },
   {
-    label: "MiniMax Music 2.5",
+    label: "ofubest Music 2.5",
     href: "#",
   },
   {
-    label: "MiniMax Music 2.0",
+    label: "ofubest Music 2.0",
     href: "#",
   },
   {
-    label: "MiniMax Music 1.5",
+    label: "ofubest Music 1.5",
     href: "#",
   },
 ]
@@ -108,7 +108,7 @@ const modelCategories: NavItemChild[] = [
 const productItems: NavItemChild[] = [
   {
     label: "Agent",
-    href: "https://agent.minimaxi.com",
+    href: "https://agent.ofubest.com",
   },
   {
     label: "海螺视频",
@@ -116,7 +116,7 @@ const productItems: NavItemChild[] = [
   },
   {
     label: "语音",
-    href: "https://www.minimaxi.com/audio",
+    href: "https://www.ofubest.com/audio",
   },
   {
     label: "星野",
@@ -127,19 +127,19 @@ const productItems: NavItemChild[] = [
 const platformItems: NavItemChild[] = [
   {
     label: "文档中心",
-    href: "https://platform.minimaxi.com/docs",
+    href: "https://platform.ofubest.com/docs",
   },
   {
     label: "Token Plan",
-    href: "https://platform.minimaxi.com/subscribe/token-plan",
+    href: "https://platform.ofubest.com/subscribe/token-plan",
   },
   {
     label: "产品定价",
-    href: "https://platform.minimaxi.com/docs/pricing/overview",
+    href: "https://platform.ofubest.com/docs/pricing/overview",
   },
   {
     label: "平台登录",
-    href: "https://platform.minimaxi.com/user-center/basic-information",
+    href: "https://platform.ofubest.com/user-center/basic-information",
   },
 ]
 
@@ -150,7 +150,7 @@ const aboutItems: NavItemChild[] = [
   },
   {
     label: "投资者关系",
-    href: "https://ir.minimaxi.com",
+    href: "https://ir.ofubest.com",
   },
   {
     label: "加入我们",
@@ -161,19 +161,19 @@ const aboutItems: NavItemChild[] = [
 const loginItems: NavItemChild[] = [
   {
     label: "API 开放平台",
-    href: "https://platform.minimaxi.com/login",
+    href: "https://platform.ofubest.com/login",
   },
   {
-    label: "MiniMax Agent",
-    href: "https://agent.minimaxi.com",
+    label: "ofubest Agent",
+    href: "https://agent.ofubest.com",
   },
   {
     label: "海螺视频",
     href: "https://hailuoai.com",
   },
   {
-    label: "MiniMax 语音",
-    href: "https://www.minimaxi.com/audio",
+    label: "ofubest 语音",
+    href: "https://www.ofubest.com/audio",
   },
 ]
 
@@ -437,12 +437,12 @@ export function Navigation() {
             <text
               x="32"
               y="20"
-              fill="white"
+              fill={theme === "dark" ? "white" : "url(#ofubest-text-gradient)"}
               fontFamily="Arial, sans-serif"
               fontSize="18"
               fontWeight="bold"
             >
-              MiniMax
+              ofubest
             </text>
             <defs>
               <linearGradient
@@ -455,6 +455,17 @@ export function Navigation() {
               >
                 <stop stopColor="#8B5CF6" />
                 <stop offset="1" stopColor="#6366F1" />
+              </linearGradient>
+              <linearGradient
+                id="ofubest-text-gradient"
+                x1="32"
+                y1="14"
+                x2="140"
+                y2="14"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stopColor="#F97316" />
+                <stop offset="1" stopColor="#EA580C" />
               </linearGradient>
             </defs>
           </svg>
@@ -639,7 +650,7 @@ export function Navigation() {
           </button>
 
           <Link
-            href="https://www.minimax.io/"
+            href="https://www.ofubest.io/"
             target="_blank"
             rel="noopener noreferrer"
             className={cn(

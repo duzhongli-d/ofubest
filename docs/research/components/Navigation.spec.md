@@ -10,7 +10,7 @@
 ```
 nav (fixed top, z-50, bg-dark/80 backdrop-blur-md)
 ├── div (max-w-[1440px] mx-auto px-6)
-│   ├── a (Logo - MiniMax)
+│   ├── a (Logo - ofubest)
 │   ├── div (nav items - flex gap-8)
 │   │   ├── div (模型 dropdown trigger) → dropdown
 │   │   ├── div (产品 dropdown trigger) → dropdown
@@ -105,10 +105,10 @@ nav (fixed top, z-50, bg-dark/80 backdrop-blur-md)
 - 关于我们 (with dropdown)
 
 ### Model Dropdown Content
-- 文本: MiniMax M2.7, M2.5, M2-Her, M2.1, M2
-- 语音: MiniMax Speech 2.8, 2.6, 2.5
-- 视频: MiniMax Hailuo 2.3 / 2.3 Fast, Hailuo 02
-- 音乐: MiniMax Music 2.6, 2.5+, 2.5, 2.0, 1.5
+- 文本: ofubest M2.7, M2.5, M2-Her, M2.1, M2
+- 语音: ofubest Speech 2.8, 2.6, 2.5
+- 视频: ofubest Hailuo 2.3 / 2.3 Fast, Hailuo 02
+- 音乐: ofubest Music 2.6, 2.5+, 2.5, 2.0, 1.5
 
 ### Product Dropdown Content
 - Agent → agent.minimaxi.com
@@ -129,9 +129,9 @@ nav (fixed top, z-50, bg-dark/80 backdrop-blur-md)
 
 ### Login Dropdown Content
 - API 开放平台 → platform.minimaxi.com/login
-- MiniMax Agent → agent.minimaxi.com
+- ofubest Agent → agent.minimaxi.com
 - 海螺视频 → hailuoai.com
-- MiniMax 语音 → minimaxi.com/audio
+- ofubest 语音 → minimaxi.com/audio
 
 ### Language Switcher
 - EN → https://www.minimax.io/

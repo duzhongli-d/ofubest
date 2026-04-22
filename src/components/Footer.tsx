@@ -4,30 +4,30 @@ import Link from "next/link"
 import { cn } from "@/lib/utils"
 
 const researchLinks = [
-  { label: "MiniMax M2.7", href: "/news/minimax-m27-zh" },
-  { label: "MiniMax M2.5", href: "/news/minimax-m25" },
-  { label: "MiniMax M2-her", href: "/news/minimax-m2-her-技术深度解析" },
-  { label: "MiniMax M2.1", href: "/news/minimax-m21" },
-  { label: "MiniMax M2", href: "/news/minimax-m2" },
-  { label: "MiniMax Speech 2.8", href: "/news/minimax-speech-28" },
-  { label: "MiniMax Hailuo 2.3", href: "/news/minimax-hailuo-23" },
-  { label: "MiniMax Music 2.6", href: "/news/music-26" },
-  { label: "MiniMax Music 2.5+", href: "/news/music-25-2" },
-  { label: "MiniMax Music 2.0", href: "/news/minimax-music-20" },
+  { label: "ofubest M2.7", href: "/news/minimax-m27-zh" },
+  { label: "ofubest M2.5", href: "/news/minimax-m25" },
+  { label: "ofubest M2-her", href: "/news/minimax-m2-her-技术深度解析" },
+  { label: "ofubest M2.1", href: "/news/minimax-m21" },
+  { label: "ofubest M2", href: "/news/minimax-m2" },
+  { label: "ofubest Speech 2.8", href: "/news/minimax-speech-28" },
+  { label: "ofubest Hailuo 2.3", href: "/news/minimax-hailuo-23" },
+  { label: "ofubest Music 2.6", href: "/news/music-26" },
+  { label: "ofubest Music 2.5+", href: "/news/music-25-2" },
+  { label: "ofubest Music 2.0", href: "/news/minimax-music-20" },
 ]
 
 const productLinks = [
-  { label: "Agent", href: "https://agent.minimaxi.com/" },
+  { label: "Agent", href: "https://agent.ofubest.com/" },
   { label: "海螺视频", href: "https://hailuoai.com/video" },
-  { label: "语音", href: "https://www.minimaxi.com/audio" },
+  { label: "语音", href: "https://www.ofubest.com/audio" },
   { label: "星野", href: "https://www.xingyeai.com/" },
 ]
 
 const platformLinks = [
-  { label: "文档中心", href: "https://platform.minimaxi.com/docs" },
-  { label: "Token Plan", href: "https://platform.minimaxi.com/subscribe/token-plan" },
-  { label: "产品定价", href: "https://platform.minimaxi.com/docs/pricing/overview" },
-  { label: "平台登录", href: "https://platform.minimaxi.com/user-center/basic-information" },
+  { label: "文档中心", href: "https://platform.ofubest.com/docs" },
+  { label: "Token Plan", href: "https://platform.ofubest.com/subscribe/token-plan" },
+  { label: "产品定价", href: "https://platform.ofubest.com/docs/pricing/overview" },
+  { label: "平台登录", href: "https://platform.ofubest.com/user-center/basic-information" },
 ]
 
 const aboutLinks = [
@@ -36,14 +36,14 @@ const aboutLinks = [
 ]
 
 const socialLinks = [
-  { label: "GitHub", href: "https://github.com/MiniMax-AI" },
-  { label: "HuggingFace", href: "https://huggingface.co/MiniMaxAI" },
+  { label: "GitHub", href: "https://github.com/ofubest-AI" },
+  { label: "HuggingFace", href: "https://huggingface.co/ofubestAI" },
   { label: "Discord", href: "https://discord.gg/DPC4AHFCBw" },
 ]
 
 const legalLinks = [
-  { label: "隐私条款", href: "https://platform.minimaxi.com/protocol/privacy-policy" },
-  { label: "用户协议", href: "https://platform.minimaxi.com/protocol/user-agreement" },
+  { label: "隐私条款", href: "https://platform.ofubest.com/protocol/privacy-policy" },
+  { label: "用户协议", href: "https://platform.ofubest.com/protocol/user-agreement" },
 ]
 
 interface LinkColumnProps {
@@ -124,7 +124,7 @@ export function Footer() {
                   fontSize="18"
                   fontWeight="bold"
                 >
-                  MiniMax
+                  ofubest
                 </text>
                 <defs>
                   <linearGradient
@@ -143,7 +143,7 @@ export function Footer() {
             </div>
 
             {/* Email */}
-            <p className="text-sm dark:text-white/60 text-black/60 mb-4">bd@minimax.io</p>
+            <p className="text-sm dark:text-white/60 text-black/60 mb-4">bd@ofubest.io</p>
 
             {/* Social Links */}
             <div className="flex gap-4 mb-8">
@@ -197,10 +197,10 @@ export function Footer() {
                 </a>
               ))}
               <a
-                href="mailto:qinquan@minimaxi.com"
+                href="mailto:qinquan@ofubest.com"
                 className="text-xs dark:text-white/40 text-black/40 hover:dark:text-white/70 hover:text-black transition-colors duration-200"
               >
-                涉企侵权举报专用邮箱: qinquan@minimaxi.com
+                涉企侵权举报专用邮箱: qinquan@ofubest.com
               </a>
             </div>
           </div>

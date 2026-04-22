@@ -11,10 +11,10 @@ const slides = [
   {
     id: "music-2-6",
     titleIcon: "/images/hero-title-icon.png",
-    heading: "MiniMax Music 2.6",
+    heading: "ofubest Music 2.6",
     subtitle: "Cover 翻唱、器乐提升、Agent 集成，让每个人都能成为音乐创作者",
     buttons: [
-      { text: "即刻接入API", href: "https://platform.minimaxi.com/docs/api-reference/music-generation" },
+      { text: "即刻接入API", href: "https://platform.ofubest.com/docs/api-reference/music-generation" },
       { text: "了解更多", href: "/news/music-26" },
     ],
     genreCards: [
@@ -31,10 +31,10 @@ const slides = [
   {
     id: "m2-7",
     titleIcon: "/images/m27-title-icon.png",
-    heading: "MiniMax M2.7",
+    heading: "ofubest M2.7",
     subtitle: "开启模型的自我进化，相比 M2.5 在实战能力上有显著的提升",
     buttons: [
-      { text: "即刻接入API", href: "https://platform.minimaxi.com" },
+      { text: "即刻接入API", href: "https://platform.ofubest.com" },
       { text: "立即体验Agent", href: "/agent" },
       { text: "了解更多", href: "/news/m2-7" },
     ],
@@ -58,7 +58,7 @@ const slides = [
     heading: "Token Plan",
     subtitle: "专为开发者定制的超高性价比 token 套餐",
     buttons: [
-      { text: "即刻接入API", href: "https://platform.minimaxi.com" },
+      { text: "即刻接入API", href: "https://platform.ofubest.com" },
       { text: "订阅", href: "/token-plan" },
     ],
     benefitCards: [
@@ -70,7 +70,7 @@ const slides = [
   {
     id: "hailuo-2-3",
     titleIcon: "/images/hailuo23-title-icon.png",
-    heading: "MiniMax Hailuo 2.3",
+    heading: "ofubest Hailuo 2.3",
     subtitle: "动静皆非凡：极致动态，入微传情",
     links: [
       { text: "即刻体验", href: "/hailuo" },
@@ -82,7 +82,7 @@ const slides = [
   {
     id: "speech-2-8",
     titleIcon: "/images/speech28-title-icon.png",
-    heading: "MiniMax Speech 2.8",
+    heading: "ofubest Speech 2.8",
     subtitle: "赋予 AI 语音'人的温度'",
     links: [
       { text: "即刻体验", href: "/speech" },
@@ -98,7 +98,7 @@ const slides = [
   {
     id: "agent",
     titleIcon: "/images/agent-title-icon.png",
-    heading: "MiniMax Agent",
+    heading: "ofubest Agent",
     subtitle: "智能助手，为您的工作和生活提供全方位支持。",
     links: [
       { text: "即刻体验", href: "/agent" },
@@ -109,7 +109,7 @@ const slides = [
   {
     id: "m2-her",
     titleIcon: "/images/m2her-title-icon.png",
-    heading: "MiniMax M2-her",
+    heading: "ofubest M2-her",
     subtitle: "多角色沉浸扮演，驾驭长轮次复杂场景",
     links: [
       { text: "即刻体验", href: "/m2-her" },
@@ -223,7 +223,7 @@ function SlideContent({ slide, isActive }: { slide: (typeof slides)[0]; isActive
       <div className="grid grid-cols-2 gap-12 px-20 py-16 h-full items-center">
         <div className="flex flex-col gap-6">
           <div className="flex items-center gap-3">
-            <span className="text-3xl font-bold dark:text-white text-black">MiniMax</span>
+            <span className="text-3xl font-bold dark:text-white text-black">ofubest</span>
             {slide.titleIcon && (
               <div className="relative w-[44px] h-[44px]">
                 {!imageErrors[`titleIcon-${slide.id}`] ? (
@@ -237,7 +237,7 @@ function SlideContent({ slide, isActive }: { slide: (typeof slides)[0]; isActive
                 ) : null}
               </div>
             )}
-            <span className="text-3xl font-bold dark:text-white text-black">{slide.heading.replace("MiniMax ", "")}</span>
+            <span className="text-3xl font-bold dark:text-white text-black">{slide.heading.replace("ofubest ", "")}</span>
           </div>
           <p className="text-lg dark:text-white/70 text-black/70 max-w-md">{slide.subtitle}</p>
           <div className="flex gap-4 mt-4">
@@ -292,7 +292,7 @@ function SlideContent({ slide, isActive }: { slide: (typeof slides)[0]; isActive
       <div className="grid grid-cols-2 gap-12 px-20 py-16 h-full items-center">
         <div className="flex flex-col gap-6">
           <div className="flex items-center gap-3">
-            <span className="text-3xl font-bold dark:text-white text-black">MiniMax</span>
+            <span className="text-3xl font-bold dark:text-white text-black">ofubest</span>
             {slide.titleIcon && (
               <div className="relative w-[44px] h-[44px]">
                 {!imageErrors[`titleIcon-${slide.id}`] ? (
@@ -306,7 +306,7 @@ function SlideContent({ slide, isActive }: { slide: (typeof slides)[0]; isActive
                 ) : null}
               </div>
             )}
-            <span className="text-3xl font-bold dark:text-white text-black">{slide.heading.replace("MiniMax ", "")}</span>
+            <span className="text-3xl font-bold dark:text-white text-black">{slide.heading.replace("ofubest ", "")}</span>
           </div>
           <p className="text-lg dark:text-white/70 text-black/70 max-w-md">{slide.subtitle}</p>
           <div className="flex gap-4 mt-4 flex-wrap">
@@ -431,7 +431,7 @@ function SlideContent({ slide, isActive }: { slide: (typeof slides)[0]; isActive
       <div className="grid grid-cols-2 gap-12 px-20 py-16 h-full items-center">
         <div className="flex flex-col gap-6">
           <div className="flex items-center gap-3">
-            <span className="text-3xl font-bold dark:text-white text-black">MiniMax</span>
+            <span className="text-3xl font-bold dark:text-white text-black">ofubest</span>
             {slide.titleIcon && (
               <div className="relative w-[44px] h-[44px]">
                 {!imageErrors[`titleIcon-${slide.id}`] ? (
@@ -445,7 +445,7 @@ function SlideContent({ slide, isActive }: { slide: (typeof slides)[0]; isActive
                 ) : null}
               </div>
             )}
-            <span className="text-3xl font-bold dark:text-white text-black">{slide.heading.replace("MiniMax ", "")}</span>
+            <span className="text-3xl font-bold dark:text-white text-black">{slide.heading.replace("ofubest ", "")}</span>
           </div>
           <p className="text-lg dark:text-white/70 text-black/70 max-w-md">{slide.subtitle}</p>
           <div className="flex gap-4 mt-4 flex-wrap">
@@ -486,7 +486,7 @@ function SlideContent({ slide, isActive }: { slide: (typeof slides)[0]; isActive
       <div className="grid grid-cols-2 gap-12 px-20 py-16 h-full items-center">
         <div className="flex flex-col gap-6">
           <div className="flex items-center gap-3">
-            <span className="text-3xl font-bold dark:text-white text-black">MiniMax</span>
+            <span className="text-3xl font-bold dark:text-white text-black">ofubest</span>
             {slide.titleIcon && (
               <div className="relative w-[44px] h-[44px]">
                 {!imageErrors[`titleIcon-${slide.id}`] ? (
@@ -500,7 +500,7 @@ function SlideContent({ slide, isActive }: { slide: (typeof slides)[0]; isActive
                 ) : null}
               </div>
             )}
-            <span className="text-3xl font-bold dark:text-white text-black">{slide.heading.replace("MiniMax ", "")}</span>
+            <span className="text-3xl font-bold dark:text-white text-black">{slide.heading.replace("ofubest ", "")}</span>
           </div>
           <p className="text-lg dark:text-white/70 text-black/70 max-w-md">{slide.subtitle}</p>
           <div className="flex gap-4 mt-4 flex-wrap">
@@ -556,7 +556,7 @@ function SlideContent({ slide, isActive }: { slide: (typeof slides)[0]; isActive
       <div className="flex flex-col justify-center px-20 py-16 h-full gap-8">
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-3">
-            <span className="text-3xl font-bold dark:text-white text-black">MiniMax</span>
+            <span className="text-3xl font-bold dark:text-white text-black">ofubest</span>
             {slide.titleIcon && (
               <div className="relative w-[44px] h-[44px]">
                 {!imageErrors[`titleIcon-${slide.id}`] ? (
@@ -570,7 +570,7 @@ function SlideContent({ slide, isActive }: { slide: (typeof slides)[0]; isActive
                 ) : null}
               </div>
             )}
-            <span className="text-3xl font-bold dark:text-white text-black">{slide.heading.replace("MiniMax ", "")}</span>
+            <span className="text-3xl font-bold dark:text-white text-black">{slide.heading.replace("ofubest ", "")}</span>
           </div>
           <p className="text-lg dark:text-white/70 text-black/70 max-w-lg">{slide.subtitle}</p>
           <div className="flex gap-4 mt-2 flex-wrap">
@@ -611,7 +611,7 @@ function SlideContent({ slide, isActive }: { slide: (typeof slides)[0]; isActive
       <div className="grid grid-cols-2 gap-12 px-20 py-16 h-full items-center">
         <div className="flex flex-col gap-6">
           <div className="flex items-center gap-3">
-            <span className="text-3xl font-bold dark:text-white text-black">MiniMax</span>
+            <span className="text-3xl font-bold dark:text-white text-black">ofubest</span>
             {slide.titleIcon && (
               <div className="relative w-[44px] h-[44px]">
                 {!imageErrors[`titleIcon-${slide.id}`] ? (
@@ -625,7 +625,7 @@ function SlideContent({ slide, isActive }: { slide: (typeof slides)[0]; isActive
                 ) : null}
               </div>
             )}
-            <span className="text-3xl font-bold dark:text-white text-black">{slide.heading.replace("MiniMax ", "")}</span>
+            <span className="text-3xl font-bold dark:text-white text-black">{slide.heading.replace("ofubest ", "")}</span>
           </div>
           <p className="text-lg dark:text-white/70 text-black/70 max-w-md">{slide.subtitle}</p>
           <div className="flex gap-4 mt-4 flex-wrap">

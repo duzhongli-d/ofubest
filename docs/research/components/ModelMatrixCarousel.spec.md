@@ -8,7 +8,7 @@
 ## DOM Structure
 
 ```
-section (py-20 bg-minimax-bg-dark)
+section (py-20 bg-ofubest-bg-dark)
 ├── div (max-w-[1440px] mx-auto px-6)
 │   ├── div (header - text-center mb-12)
 │   │   ├── h2: "全栈模型矩阵"
@@ -17,19 +17,19 @@ section (py-20 bg-minimax-bg-dark)
 │       ├── button (prev - absolute left-0)
 │       ├── button (next - absolute right-0)
 │       └── div (cards track - flex gap-6 overflow-x-auto)
-│           ├── Card: MiniMax M2.7
-│           ├── Card: MiniMax Music 2.6
+│           ├── Card: ofubest M2.7
+│           ├── Card: ofubest Music 2.6
 │           ├── Card: Hailuo 2.3 / 2.3 Fast
-│           ├── Card: MiniMax Speech 2.8
-│           ├── Card: MiniMax M2-her
-│           └── Card: MiniMax MCP Server
+│           ├── Card: ofubest Speech 2.8
+│           ├── Card: ofubest M2-her
+│           └── Card: ofubest MCP Server
 ```
 
 ## Computed Styles
 
 ### Section
 - padding: 80px 0
-- backgroundColor: #0a0a0a (--minimax-bg-dark)
+- backgroundColor: #0a0a0a (--ofubest-bg-dark)
 
 ### Header
 - textAlign: center
@@ -118,13 +118,13 @@ section (py-20 bg-minimax-bg-dark)
 
 ## Cards Data
 
-1. **MiniMax M2.7** (NEW)
+1. **ofubest M2.7** (NEW)
    - Type: Text Model
    - Description: "模型自我进化，以技术突破驱动生产力革新"
    - Link: /news/minimax-m27-zh
    - Image: from downloaded assets
 
-2. **MiniMax Music 2.6** (NEW)
+2. **ofubest Music 2.6** (NEW)
    - Type: Music Model
    - Description: "翻唱入心，器乐入魂"
    - Link: /news/music-26
@@ -134,17 +134,17 @@ section (py-20 bg-minimax-bg-dark)
    - Description: "动静皆非凡：极致动态，入微传情"
    - Link: /news/minimax-hailuo-23
 
-4. **MiniMax Speech 2.8** (NEW)
+4. **ofubest Speech 2.8** (NEW)
    - Type: Audio Model
    - Description: "赋予 AI 语音'人的温度'"
    - Link: /news/minimax-speech-28
 
-5. **MiniMax M2-her** (NEW)
+5. **ofubest M2-her** (NEW)
    - Type: Text Model
    - Description: "多角色沉浸扮演，驾驭长轮次复杂场景"
    - Link: /news/minimax-m2-her-技术深度解析
 
-6. **MiniMax MCP Server**
+6. **ofubest MCP Server**
    - Type: MCP
    - Description: "视频生成、图像生成、语音生成和声音克隆工具现已向开发者开放"
    - Link: /news/minimax-mcp

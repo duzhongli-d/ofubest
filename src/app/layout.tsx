@@ -3,8 +3,8 @@ import "./globals.css";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 
 export const metadata: Metadata = {
-  title: "MiniMax - 全球领先的通用人工智能科技公司",
-  description: "MiniMax是一家致力于通用人工智能研发的科技公司，打造了海螺AI、MiniMax Agent等AI原生产品。",
+  title: "ofubest - 全球领先的通用人工智能科技公司",
+  description: "ofubest是一家致力于通用人工智能研发的科技公司，打造了海螺AI、ofubest Agent等AI原生产品。",
   icons: {
     icon: "/favicon.ico",
   },
