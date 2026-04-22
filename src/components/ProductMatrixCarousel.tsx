@@ -47,7 +47,7 @@ function ProductCardComponent({ card }: { card: ProductCard }) {
       href={card.link}
       className={cn(
         "flex-shrink-0 w-[280px] rounded-2xl overflow-hidden cursor-pointer block",
-        "bg-[#141414]"
+        "dark:bg-[#141414] bg-gray-200"
       )}
     >
       {/* Card Image */}
@@ -63,20 +63,20 @@ function ProductCardComponent({ card }: { card: ProductCard }) {
 
         {/* NEW Badge */}
         {card.isNew && (
-          <div className="absolute top-3 left-3 bg-primary/90 text-white text-xs px-2 py-1 rounded-full font-medium">
+          <div className="absolute top-3 left-3 bg-primary/90 dark:text-black text-white text-xs px-2 py-1 rounded-full font-medium">
             NEW
           </div>
         )}
 
         {/* Title Overlay */}
         <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
-          <h3 className="text-lg font-semibold text-white">{card.title}</h3>
+          <h3 className="text-lg font-semibold dark:text-white text-black">{card.title}</h3>
         </div>
       </div>
 
       {/* Card Description */}
       <div className="p-4">
-        <p className="text-sm text-white/70">{card.description}</p>
+        <p className="text-sm dark:text-white/70 text-black/70">{card.description}</p>
       </div>
     </Link>
   )
@@ -107,7 +107,7 @@ function ChevronButton({
       )}
     >
       <svg
-        className={cn("w-5 h-5 text-white", direction === "left" ? "" : "rotate-180")}
+        className={cn("w-5 h-5 dark:text-white text-black", direction === "left" ? "" : "rotate-180")}
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -141,10 +141,10 @@ export function ProductMatrixCarousel() {
       <div className="max-w-[1440px] mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-[36px] font-semibold text-white mb-3">
+          <h2 className="text-[36px] font-semibold dark:text-white text-black mb-3">
             AI 产品矩阵
           </h2>
-          <p className="text-base text-white/60 max-w-[600px] mx-auto">
+          <p className="text-base dark:text-white text-black/60 max-w-[600px] mx-auto">
             从智能对话到视频创作，从声音合成到虚拟角色，MiniMax 为你打造全方位 AI 体验
           </p>
         </div>

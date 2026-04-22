@@ -54,13 +54,13 @@ interface LinkColumnProps {
 function LinkColumn({ heading, links }: LinkColumnProps) {
   return (
     <div className="flex flex-col gap-4">
-      <h3 className="text-sm font-semibold text-white mb-2">{heading}</h3>
+      <h3 className="text-sm font-semibold dark:text-white text-black mb-2">{heading}</h3>
       <div className="flex flex-col gap-3">
         {links.map((link, index) => (
           <Link
             key={index}
             href={link.href}
-            className="text-sm text-white/60 hover:text-white transition-colors duration-200"
+            className="text-sm dark:text-white dark:text-white/60 text-black/60 hover:dark:text-white hover:text-black transition-colors duration-200"
             target={link.href.startsWith("http") ? "_blank" : undefined}
             rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
           >
@@ -76,10 +76,10 @@ function SocialIcon({ label }: { label: string }) {
   // Placeholder squares for social icons
   return (
     <div
-      className="w-6 h-6 bg-white/20 rounded flex items-center justify-center"
+      className="w-6 h-6 dark:bg-white/20 bg-black/20 rounded flex items-center justify-center"
       title={label}
     >
-      <span className="text-xs text-white/60">{label[0]}</span>
+      <span className="text-xs dark:text-white/60 text-black/60">{label[0]}</span>
     </div>
   )
 }
@@ -88,21 +88,21 @@ function WeChatQRCode({ label }: { label: string }) {
   return (
     <div className="flex flex-col items-center gap-2">
       <div className="w-[84px] h-[84px] bg-white rounded-lg p-1">
-        <div className="w-full h-full bg-white/20 rounded" />
+        <div className="w-full h-full dark:bg-white/20 bg-black/20 rounded" />
       </div>
-      <span className="text-xs text-white/50 text-center">{label}</span>
+      <span className="text-xs dark:text-white/50 text-black/50 text-center">{label}</span>
     </div>
   )
 }
 
 export function Footer() {
   return (
-    <footer className="bg-[#0a0a0a] text-white pt-16 pb-8">
+    <footer className="dark:bg-[#0a0a0a] bg-gray-100 pt-16 pb-8">
       <div className="max-w-[1440px] mx-auto px-6">
         {/* Top Section */}
-        <div className="flex justify-between gap-16 mb-12 pb-12 border-b border-white/10">
+        <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-16 mb-12 pb-12 border-b dark:border-white/10 border-black/10">
           {/* Brand Column */}
-          <div className="w-[200px]">
+          <div className="w-full lg:w-[200px]">
             {/* Logo */}
             <div className="mb-6">
               <svg
@@ -143,7 +143,7 @@ export function Footer() {
             </div>
 
             {/* Email */}
-            <p className="text-sm text-white/60 mb-4">bd@minimax.io</p>
+            <p className="text-sm dark:text-white/60 text-black/60 mb-4">bd@minimax.io</p>
 
             {/* Social Links */}
             <div className="flex gap-4 mb-8">
@@ -153,7 +153,7 @@ export function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white/60 hover:text-white transition-colors duration-200"
+                  className="dark:text-white dark:text-white/60 text-black/60 hover:dark:text-white hover:text-black transition-colors duration-200"
                 >
                   <SocialIcon label={social.label} />
                 </a>
@@ -169,7 +169,7 @@ export function Footer() {
           </div>
 
           {/* Links Grid */}
-          <div className="grid grid-cols-4 gap-12 flex-1">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 flex-1 pl-12 lg:pl-24">
             <LinkColumn heading="研究" links={researchLinks} />
             <LinkColumn heading="产品" links={productLinks} />
             <LinkColumn heading="开放平台" links={platformLinks} />
@@ -181,7 +181,7 @@ export function Footer() {
         <div className="flex justify-between items-center pt-8">
           {/* Copyright and Legal */}
           <div className="flex flex-col gap-2">
-            <p className="text-xs text-white/40">
+            <p className="text-xs dark:text-white/40 text-black/40">
               ©上海稀宇科技有限公司 2026 版权所有
             </p>
             <div className="flex gap-6">
@@ -191,14 +191,14 @@ export function Footer() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs text-white/40 hover:text-white/70 transition-colors duration-200"
+                  className="text-xs dark:text-white/40 text-black/40 hover:dark:text-white/70 hover:text-black transition-colors duration-200"
                 >
                   {link.label}
                 </a>
               ))}
               <a
                 href="mailto:qinquan@minimaxi.com"
-                className="text-xs text-white/40 hover:text-white/70 transition-colors duration-200"
+                className="text-xs dark:text-white/40 text-black/40 hover:dark:text-white/70 hover:text-black transition-colors duration-200"
               >
                 涉企侵权举报专用邮箱: qinquan@minimaxi.com
               </a>
@@ -206,7 +206,7 @@ export function Footer() {
           </div>
 
           {/* ICP Info */}
-          <div className="flex items-center gap-2 text-xs text-white/40">
+          <div className="flex items-center gap-2 text-xs dark:text-white/40 text-black/40">
             <svg
               className="w-4 h-4"
               fill="none"

@@ -250,7 +250,7 @@ function Dropdown({
       >
         <div
           className={cn(
-            "bg-[#141414] border border-white/10 rounded-xl shadow-xl p-4",
+            "dark:bg-[#141414] bg-white border dark:border-white/10 border-black/10 rounded-xl shadow-xl p-4",
             "min-w-[600px]"
           )}
         >
@@ -260,7 +260,7 @@ function Dropdown({
                 key={index}
                 href={item.href}
                 className={cn(
-                  "text-sm text-white/70 hover:text-white transition-colors duration-200",
+                  "text-sm dark:text-white/70 text-black/70 hover:dark:text-white hover:text-black transition-colors duration-200",
                   "block py-1"
                 )}
               >
@@ -314,7 +314,7 @@ function LoginDropdown({
       >
         <div
           className={cn(
-            "bg-[#141414] border border-white/10 rounded-xl shadow-xl p-4",
+            "dark:bg-[#141414] bg-white border dark:border-white/10 border-black/10 rounded-xl shadow-xl p-4",
             "w-[280px]"
           )}
         >
@@ -324,7 +324,7 @@ function LoginDropdown({
                 key={index}
                 href={item.href}
                 className={cn(
-                  "text-sm text-white/70 hover:text-white transition-colors duration-200",
+                  "text-sm dark:text-white/70 text-black/70 hover:dark:text-white hover:text-black transition-colors duration-200",
                   "block py-1"
                 )}
               >
@@ -368,7 +368,7 @@ function NavItemWithDropdown({
     <div ref={dropdownRef} className="relative">
       <button
         className={cn(
-          "text-sm text-white/70 hover:text-white transition-colors duration-200",
+          "text-sm dark:text-white/70 text-black/70 hover:dark:text-white hover:text-black transition-colors duration-200",
           "flex items-center gap-1"
         )}
       >
@@ -409,8 +409,8 @@ export function Navigation() {
     <nav
       className={cn(
         "fixed top-0 left-0 right-0 z-50",
-        "bg-[#0a0a0a]/80 backdrop-blur-md",
-        "border-b border-white/10",
+        "dark:bg-[#0a0a0a]/80 bg-white/80 backdrop-blur-md",
+        "dark:border-white/10 border-black/10",
         "px-6"
       )}
     >
@@ -469,7 +469,7 @@ export function Navigation() {
                   key={index}
                   href={item.href}
                   className={cn(
-                    "text-sm text-white/70 hover:text-white transition-colors duration-200"
+                    "text-sm dark:text-white/70 text-black/70 hover:dark:text-white hover:text-black transition-colors duration-200"
                   )}
                 >
                   {item.label}
@@ -482,7 +482,7 @@ export function Navigation() {
                 <NavItemWithDropdown key={index} label={item.label}>
                   <div
                     className={cn(
-                      "bg-[#141414] border border-white/10 rounded-xl shadow-xl p-4",
+                      "dark:bg-[#141414] bg-white border dark:border-white/10 border-black/10 rounded-xl shadow-xl p-4",
                       "min-w-[600px]"
                     )}
                   >
@@ -492,7 +492,7 @@ export function Navigation() {
                           key={childIndex}
                           href={child.href}
                           className={cn(
-                            "text-sm text-white/70 hover:text-white transition-colors duration-200",
+                            "text-sm dark:text-white/70 text-black/70 hover:dark:text-white hover:text-black transition-colors duration-200",
                             "block py-1"
                           )}
                         >
@@ -510,7 +510,7 @@ export function Navigation() {
                 <NavItemWithDropdown key={index} label={item.label}>
                   <div
                     className={cn(
-                      "bg-[#141414] border border-white/10 rounded-xl shadow-xl p-4",
+                      "dark:bg-[#141414] bg-white border dark:border-white/10 border-black/10 rounded-xl shadow-xl p-4",
                       "min-w-[280px]"
                     )}
                   >
@@ -520,7 +520,7 @@ export function Navigation() {
                           key={childIndex}
                           href={child.href}
                           className={cn(
-                            "text-sm text-white/70 hover:text-white transition-colors duration-200",
+                            "text-sm dark:text-white/70 text-black/70 hover:dark:text-white hover:text-black transition-colors duration-200",
                             "block py-1"
                           )}
                         >
@@ -538,7 +538,7 @@ export function Navigation() {
                 <NavItemWithDropdown key={index} label={item.label}>
                   <div
                     className={cn(
-                      "bg-[#141414] border border-white/10 rounded-xl shadow-xl p-4",
+                      "dark:bg-[#141414] bg-white border dark:border-white/10 border-black/10 rounded-xl shadow-xl p-4",
                       "min-w-[280px]"
                     )}
                   >
@@ -548,7 +548,7 @@ export function Navigation() {
                           key={childIndex}
                           href={child.href}
                           className={cn(
-                            "text-sm text-white/70 hover:text-white transition-colors duration-200",
+                            "text-sm dark:text-white/70 text-black/70 hover:dark:text-white hover:text-black transition-colors duration-200",
                             "block py-1"
                           )}
                         >
@@ -566,7 +566,7 @@ export function Navigation() {
                 <NavItemWithDropdown key={index} label={item.label}>
                   <div
                     className={cn(
-                      "bg-[#141414] border border-white/10 rounded-xl shadow-xl p-4",
+                      "dark:bg-[#141414] bg-white border dark:border-white/10 border-black/10 rounded-xl shadow-xl p-4",
                       "min-w-[200px]"
                     )}
                   >
@@ -576,7 +576,7 @@ export function Navigation() {
                           key={childIndex}
                           href={child.href}
                           className={cn(
-                            "text-sm text-white/70 hover:text-white transition-colors duration-200",
+                            "text-sm dark:text-white/70 text-black/70 hover:dark:text-white hover:text-black transition-colors duration-200",
                             "block py-1"
                           )}
                         >
@@ -594,7 +594,7 @@ export function Navigation() {
                 <NavItemWithDropdown key={index} label={item.label}>
                   <div
                     className={cn(
-                      "bg-[#141414] border border-white/10 rounded-xl shadow-xl p-4",
+                      "dark:bg-[#141414] bg-white border dark:border-white/10 border-black/10 rounded-xl shadow-xl p-4",
                       "min-w-[200px]"
                     )}
                   >
@@ -604,7 +604,7 @@ export function Navigation() {
                           key={childIndex}
                           href={child.href}
                           className={cn(
-                            "text-sm text-white/70 hover:text-white transition-colors duration-200",
+                            "text-sm dark:text-white/70 text-black/70 hover:dark:text-white hover:text-black transition-colors duration-200",
                             "block py-1"
                           )}
                         >
@@ -626,7 +626,7 @@ export function Navigation() {
           <button
             onClick={toggleTheme}
             className={cn(
-              "text-sm text-white/70 hover:text-white transition-colors duration-200",
+              "text-sm dark:text-white/70 text-black/70 hover:dark:text-white hover:text-black transition-colors duration-200",
               "p-1"
             )}
             aria-label="Toggle theme"
@@ -643,7 +643,7 @@ export function Navigation() {
             target="_blank"
             rel="noopener noreferrer"
             className={cn(
-              "text-sm text-white/70 hover:text-white transition-colors duration-200"
+              "text-sm dark:text-white/70 text-black/70 hover:dark:text-white hover:text-black transition-colors duration-200"
             )}
           >
             EN
@@ -652,7 +652,7 @@ export function Navigation() {
           <LoginDropdown items={loginItems}>
             <button
               className={cn(
-                "text-sm text-white/70 hover:text-white transition-colors duration-200",
+                "text-sm dark:text-white/70 text-black/70 hover:dark:text-white hover:text-black transition-colors duration-200",
                 "flex items-center gap-1"
               )}
             >

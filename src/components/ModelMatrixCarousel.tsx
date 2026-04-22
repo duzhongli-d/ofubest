@@ -69,7 +69,7 @@ function ModelCardComponent({
       href={card.link}
       className={cn(
         "flex-shrink-0 w-[280px]",
-        "bg-[#141414] rounded-2xl overflow-hidden",
+        "dark:bg-[#141414] bg-gray-200 rounded-2xl overflow-hidden",
         "cursor-pointer transition-all duration-300",
         "hover:translate-y-[-4px] hover:shadow-lg hover:shadow-black/40",
         "block"
@@ -85,8 +85,8 @@ function ModelCardComponent({
           />
         ) : (
           <div className="w-full h-full flex items-center justify-center">
-            <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center">
-              <span className="text-2xl font-bold text-white/30">
+            <div className="w-16 h-16 rounded-full dark:bg-white/10 bg-black/10 flex items-center justify-center">
+              <span className="text-2xl font-bold dark:text-white text-black">
                 {card.title.charAt(0)}
               </span>
             </div>
@@ -95,7 +95,7 @@ function ModelCardComponent({
 
         {/* NEW Badge */}
         {card.isNew && (
-          <div className="absolute top-3 right-3 bg-primary/90 text-white text-xs px-2 py-1 rounded-full font-medium">
+          <div className="absolute top-3 right-3 bg-primary/90 dark:text-black text-white text-xs px-2 py-1 rounded-full font-medium">
             NEW
           </div>
         )}
@@ -103,9 +103,9 @@ function ModelCardComponent({
 
       {/* Card Content */}
       <div className="p-5">
-        <h3 className="text-base font-semibold text-white mb-2">{card.title}</h3>
-        <p className="text-xs text-white/50 mb-3">{card.type}</p>
-        <p className="text-sm text-white/70 leading-relaxed">
+        <h3 className="text-base font-semibold dark:text-white text-black mb-2">{card.title}</h3>
+        <p className="text-xs dark:text-white/50 text-black/50 mb-3">{card.type}</p>
+        <p className="text-sm dark:text-white/70 text-black/70 leading-relaxed">
           {card.description}
         </p>
       </div>
@@ -129,16 +129,16 @@ function ChevronButton({
       className={cn(
         "absolute top-1/2 -translate-y-1/2",
         "w-10 h-10 rounded-full",
-        "bg-white/10 border border-white/20",
+        "dark:bg-white/10 bg-black/10 border dark:border-white/20 border-black/20",
         "flex items-center justify-center",
         "transition-all duration-200",
-        "hover:bg-white/20",
+        "hover:dark:bg-white/20 bg-black/20",
         "disabled:opacity-30 disabled:cursor-not-allowed",
         direction === "left" ? "left-0" : "right-0"
       )}
     >
       <svg
-        className={cn("w-5 h-5 text-white", direction === "left" ? "" : "rotate-180")}
+        className={cn("w-5 h-5 dark:text-white text-black", direction === "left" ? "" : "rotate-180")}
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -168,14 +168,14 @@ export function ModelMatrixCarousel() {
   }
 
   return (
-    <section className="py-20 bg-[#0a0a0a]">
+    <section className="py-20 dark:bg-[#0a0a0a] bg-gray-100">
       <div className="max-w-[1440px] mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-[36px] font-semibold text-white mb-3">
+          <h2 className="text-[36px] font-semibold dark:text-white text-black mb-3">
             全栈模型矩阵
           </h2>
-          <p className="text-base text-white/60 max-w-[600px] mx-auto">
+          <p className="text-base dark:text-white/60 text-black/60 max-w-[600px] mx-auto">
             涵盖文本、语音、视频、图像与音乐五大方向。助力开发者高效构建智能应用
           </p>
         </div>
