@@ -404,7 +404,7 @@ function NavItemWithDropdown({
 }
 
 export function Navigation() {
-  const { theme, toggleTheme } = useTheme()
+  const { theme, toggleTheme, mounted } = useTheme()
 
   return (
     <nav
@@ -605,10 +605,14 @@ export function Navigation() {
             )}
             aria-label="Toggle theme"
           >
-            {theme === "dark" ? (
-              <Sun className="w-4 h-4" />
+            {mounted ? (
+              theme === "dark" ? (
+                <Sun className="w-4 h-4" />
+              ) : (
+                <Moon className="w-4 h-4" />
+              )
             ) : (
-              <Moon className="w-4 h-4" />
+              <Sun className="w-4 h-4" />
             )}
           </button>
 
