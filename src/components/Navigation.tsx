@@ -221,15 +221,15 @@ function Dropdown({
     const handleMouseEnter = () => setIsOpen(true)
     const handleMouseLeave = () => setIsOpen(false)
 
-    const parent = dropdownRef.current?.parentElement
-    if (!parent) return
+    const wrapper = dropdownRef.current
+    if (!wrapper) return
 
-    parent.addEventListener("mouseenter", handleMouseEnter)
-    parent.addEventListener("mouseleave", handleMouseLeave)
+    wrapper.addEventListener("mouseenter", handleMouseEnter)
+    wrapper.addEventListener("mouseleave", handleMouseLeave)
 
     return () => {
-      parent.removeEventListener("mouseenter", handleMouseEnter)
-      parent.removeEventListener("mouseleave", handleMouseLeave)
+      wrapper.removeEventListener("mouseenter", handleMouseEnter)
+      wrapper.removeEventListener("mouseleave", handleMouseLeave)
     }
   }, [])
 
@@ -286,15 +286,15 @@ function LoginDropdown({
     const handleMouseEnter = () => setIsOpen(true)
     const handleMouseLeave = () => setIsOpen(false)
 
-    const parent = dropdownRef.current?.parentElement
-    if (!parent) return
+    const wrapper = dropdownRef.current
+    if (!wrapper) return
 
-    parent.addEventListener("mouseenter", handleMouseEnter)
-    parent.addEventListener("mouseleave", handleMouseLeave)
+    wrapper.addEventListener("mouseenter", handleMouseEnter)
+    wrapper.addEventListener("mouseleave", handleMouseLeave)
 
     return () => {
-      parent.removeEventListener("mouseenter", handleMouseEnter)
-      parent.removeEventListener("mouseleave", handleMouseLeave)
+      wrapper.removeEventListener("mouseenter", handleMouseEnter)
+      wrapper.removeEventListener("mouseleave", handleMouseLeave)
     }
   }, [])
 
@@ -350,15 +350,15 @@ function NavItemWithDropdown({
     const handleMouseEnter = () => setIsOpen(true)
     const handleMouseLeave = () => setIsOpen(false)
 
-    const parent = dropdownRef.current?.parentElement
-    if (!parent) return
+    const wrapper = dropdownRef.current
+    if (!wrapper) return
 
-    parent.addEventListener("mouseenter", handleMouseEnter)
-    parent.addEventListener("mouseleave", handleMouseLeave)
+    wrapper.addEventListener("mouseenter", handleMouseEnter)
+    wrapper.addEventListener("mouseleave", handleMouseLeave)
 
     return () => {
-      parent.removeEventListener("mouseenter", handleMouseEnter)
-      parent.removeEventListener("mouseleave", handleMouseLeave)
+      wrapper.removeEventListener("mouseenter", handleMouseEnter)
+      wrapper.removeEventListener("mouseleave", handleMouseLeave)
     }
   }, [])
 
