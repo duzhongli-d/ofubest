@@ -1,11 +1,12 @@
 "use client"
 
-import { createContext, useContext, useState, useCallback, ReactNode } from "react"
+import { createContext, useContext, useState, useCallback, useEffect, ReactNode } from "react"
 
 type Theme = "dark" | "light"
 
 interface ThemeContextType {
   theme: Theme
+  mounted: boolean
   toggleTheme: () => void
 }
 
@@ -19,7 +20,13 @@ function getInitialTheme(): Theme {
 }
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setTheme] = useState<Theme>(getInitialTheme)
+  const [theme, setTheme] = useState<Theme>("dark")
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setTheme(getInitialTheme())
+    setMounted(true)
+  }, [])
 
   const toggleTheme = useCallback(() => {
     setTheme((prev) => {
@@ -32,7 +39,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   }, [])
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme, mounted, toggleTheme }}>
       {children}
     </ThemeContext.Provider>
   )

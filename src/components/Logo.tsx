@@ -7,8 +7,9 @@ interface LogoProps {
 }
 
 export function Logo({ className }: LogoProps) {
-  const { theme } = useTheme()
-  const isDark = theme === "dark"
+  const { theme, mounted } = useTheme()
+  // Default to dark theme during SSR and before mount to prevent hydration mismatch
+  const isDark = !mounted || theme === "dark"
 
   return (
     <svg
